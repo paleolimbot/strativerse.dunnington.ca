@@ -6,6 +6,7 @@ publications:
   - dunnington11
 parameters: 
   - Pb/relative
+  - Ti/relative
 collected-earliest: ""
 collected-latest: ""
 medium: ""

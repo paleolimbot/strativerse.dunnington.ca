@@ -1,0 +1,49 @@
+{{ partial "header.html" . }}
+
+<main class="content" role="main">
+
+  <article class="article">
+
+    <h1 class="article-title">{{ .Title }}</h1>
+    
+    <div class="article-tags">
+      {{ $feature := site.GetPage (printf "/%s/%s" "feature" (.Params.feature | urlize)) }}
+      Collected from
+      <a href="{{ $feature.RelPermalink }}">{{ $feature.Title }}</a>
+    </div>
+
+    <div class="article-content">
+      {{ .Content }}
+    </div> 
+    
+    <h2>Publications</h2>
+    
+    <div class="publications publications-record">
+      {{ range .Params.publications }}
+        {{ $publication := site.GetPage (printf "/%s/%s" "publication" (. | urlize)) }}
+        {{ with $publication }}
+          <a href="{{ $publication.RelPermalink }}">{{ $publication.Title }}</a>
+        {{ else }}
+          {{ . }}
+        {{ end }}
+      {{ end }}
+    </div>
+       
+    <h2>Parameters</h2>
+    
+    <div class="parameters parameters-record">
+      {{ range .Params.parameters }}
+        {{ $parameter := site.GetPage (printf "/%s/%s" "parameter" (. | urlize)) }}
+        {{ with $parameter }}
+          <a href="{{ $parameter.RelPermalink }}">{{ $parameter.Title }}</a>
+        {{ else }}
+          {{ . }}
+        {{ end }}
+      {{ end }}
+    </div>
+    
+  </article>
+
+</main>
+
+{{ partial "footer.html" . }}

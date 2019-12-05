@@ -1,0 +1,58 @@
+{{ partial "header.html" . }}
+
+<main class="content" role="main">
+
+  <article class="article">
+
+    <h1 class="article-title">{{ .Title }}</h1>
+
+    <div class="article-content">
+      {{ .Content }}
+    </div> 
+    
+    <h2>Records</h2>
+    
+    {{ $slug := replace (replace .Path "/_index.md" "") "feature/" "" }}
+    {{ $records := where (where .Site.Pages "Type" "record") "Params.feature" $slug }}
+    
+    {{ $parameters := (slice) }}
+    {{ $publications := (slice) }}
+    <div class="records feature-records">
+      {{ range $records }}
+        {{ $parameters = union $parameters .Params.parameters }}
+        {{ $publications = union $publications .Params.publications }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
+    </div>
+    
+    <h2>Publications</h2>
+    
+    <div class="parameters publication-parameters">
+      {{ range $publications }}
+        {{ $publication := site.GetPage (printf "/%s/%s" "publication" (. | urlize)) }}
+        {{ with $publication }}
+          <a href="{{ $publication.RelPermalink }}">{{ $publication.Title }}</a>
+        {{ else }}
+          {{ . }}
+        {{ end }}
+      {{ end }}
+    </div>
+       
+    <h2>Parameters</h2>
+    
+    <div class="parameters publication-parameters">
+      {{ range $parameters }}
+        {{ $parameter := site.GetPage (printf "/%s/%s" "parameter" (. | urlize)) }}
+        {{ with $parameter }}
+          <a href="{{ $parameter.RelPermalink }}">{{ $parameter.Title }}</a>
+        {{ else }}
+          {{ . }}
+        {{ end }}
+      {{ end }}
+    </div>
+    
+  </article>
+
+</main>
+
+{{ partial "footer.html" . }}
