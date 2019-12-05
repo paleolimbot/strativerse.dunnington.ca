@@ -1,12 +1,11 @@
 ---
 title: "LL-GC10"
 date: 2011-06-12
-feature: long-lake
+feature: ca/ns/long-lake
 publications:
   - dunnington11
 parameters: 
   - Pb/relative
-parameters: []
 collected-earliest: ""
 collected-latest: ""
 medium: ""
