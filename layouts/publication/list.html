@@ -34,14 +34,33 @@
       {{ .Content }}
     </div> 
     
+    <h2>Records by feature</h2>
     {{ $slug := replace (replace (replace .Path "_index.md" "") "publication/" "") "/" "" }}
+    {{ $records := where (where .Site.Pages "Type" "record") "Params.publications" "intersect" (slice $slug) }}
+    {{ $parameters := (slice) }}
+    {{ range $records.GroupByParam "feature" }}
+      {{ $feature := site.GetPage (printf "/%s/%s" "feature" (.Key | urlize)) }}
+      <div class="records publication-records">
+        <a href="{{ $feature.RelPermalink }}">{{ $feature.Title }}</a>:
+        {{ range .Pages }}
+          {{ $parameters = union $parameters .Params.parameters }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+      </div>
+       
+    {{ end }}
     
-    <h2>Records</h2>
+    <h2>Parameters</h2>
     
-    <div class="records publication-records">
-       {{ range where (where .Site.Pages "Type" "record") "Params.publications" "intersect" (slice $slug) }}
-         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-       {{ end }}
+    <div class="parameters publication-parameters">
+      {{ range $parameters }}
+        {{ $parameter := site.GetPage (printf "/%s/%s" "parameter" (. | urlize)) }}
+        {{ with $parameter }}
+          <a href="{{ $parameter.RelPermalink }}">{{ $parameter.Title }}</a>
+        {{ else }}
+          {{ . }}
+        {{ end }}
+      {{ end }}
     </div>
     
   </article>

@@ -1,9 +1,11 @@
 ---
-title: "LL GC10"
+title: "LL-GC10"
 date: 2011-06-12
-features:
-  - long-lake
-publications: [dunnington11]
+feature: long-lake
+publications:
+  - dunnington11
+parameters: 
+  - Pb/relative
 parameters: []
 collected-earliest: ""
 collected-latest: ""
