@@ -7,17 +7,43 @@
     <h1 class="article-title">{{ .Title }}</h1>
     
     {{ $taxonomy := "people" }}
+    {{ $taxonomy_single := "person" }}
     {{ with .Param $taxonomy }}
-    <div class="article-tags">
+    <div class="article-tags article-people">
       {{ range $index, $value := . }}
-      <a class="badge badge-light" href="{{ (site.GetPage (printf "/%s/%s" $taxonomy (. | urlize))).RelPermalink }}">{{ . }}</a>
+      {{ $term_page := site.GetPage (printf "/%s/%s" $taxonomy_single (. | urlize)) }}
+      {{ $term_text := $term_page.Params.title | default ($value | markdownify) }}
+      <a href="{{ $term_page.RelPermalink }}">{{ $term_text }}</a>
       {{ end }}
+    
+    {{ end }}
+      <span class="article-date">{{ .Date.Format "2006" }}</span>
+    </div>
+    
+    {{ if .Params.csl.DOI }}
+    <div class="publication-link">
+      <a href="https://doi.org/{{ .Params.csl.DOI }}" target="_blank">doi:{{ .Params.csl.DOI }}</a>
+    </div>
+    {{ else if .Params.csl.URL }}
+    <div class="publication-link">
+      <a href="{{ .Params.csl.URL }}" target="_blank">{{ .Params.csl.URL }}</a>
     </div>
     {{ end }}
 
     <div class="article-content">
       {{ .Content }}
     </div> 
+    
+    {{ $slug := replace (replace (replace .Path "_index.md" "") "publication/" "") "/" "" }}
+    
+    <h2>Records</h2>
+    
+    <div class="records publication-records">
+       {{ range where (where .Site.Pages "Type" "record") "Params.publications" "intersect" (slice $slug) }}
+         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+       {{ end }}
+    </div>
+    
   </article>
 
 </main>

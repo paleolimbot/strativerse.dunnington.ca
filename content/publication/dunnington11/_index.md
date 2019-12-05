@@ -44,5 +44,3 @@ csl:
     - date-parts: [[2011]]
   publisher-place: "Wolfville, Nova Scotia"
 ---
-
-If there's no content, then this page won't render...

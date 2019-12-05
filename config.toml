@@ -39,3 +39,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     width = 50
     height = 50
     alt = "Logo"
+    
+[taxonomies]
+    publication = "publications"
