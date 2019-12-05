@@ -27,10 +27,13 @@
     
     <h2>Publications</h2>
     
+    {{ $people_slugs := (slice) }}
+    
     <div class="parameters publication-parameters">
       {{ range $publications }}
         {{ $publication := site.GetPage (printf "/%s/%s" "publication" (. | urlize)) }}
         {{ with $publication }}
+          {{ $people_slugs = union $people_slugs $publication.Params.people }}
           <a href="{{ $publication.RelPermalink }}">{{ $publication.Title }}</a>
         {{ else }}
           {{ . }}
@@ -48,6 +51,15 @@
         {{ else }}
           {{ . }}
         {{ end }}
+      {{ end }}
+    </div>
+    
+    <h2>People</h2>
+    
+    <div class="people people-record">
+      {{ range $people_slugs }}
+        {{ $person := site.GetPage (printf "/%s/%s" "person" (. | urlize)) }}
+        <a href="{{ $person.RelPermalink }}">{{ $person.Title }}</a>
       {{ end }}
     </div>
     
