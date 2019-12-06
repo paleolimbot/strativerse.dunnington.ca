@@ -16,22 +16,6 @@
       {{ .Content }}
     </div> 
     
-    <h2>Publications</h2>
-    
-    {{ $people_slugs := (slice) }}
-    
-    <div class="publications publications-record">
-      {{ range .Params.publications }}
-        {{ $publication := site.GetPage (printf "/%s/%s" "publication" (. | urlize)) }}
-        {{ with $publication }}
-          {{ $people_slugs = union $people_slugs $publication.Params.people }}
-          <a href="{{ $publication.RelPermalink }}">{{ $publication.Title }}</a>
-        {{ else }}
-          {{ . }}
-        {{ end }}
-      {{ end }}
-    </div>
-       
     <h2>Parameters</h2>
     
     <div class="parameters parameters-record">
@@ -45,14 +29,25 @@
       {{ end }}
     </div>
     
-    <h2>People</h2>
+    <h2>Publications</h2>
     
-    <div class="people people-record">
-      {{ range $people_slugs }}
-        {{ $person := site.GetPage (printf "/%s/%s" "person" (. | urlize)) }}
-        <a href="{{ $person.RelPermalink }}">{{ $person.Title }}</a>
-      {{ end }}
-    </div>
+    {{ $publication_slugs := partial "record_publications" (slice .)}}
+    {{ $publications := where .Site.Pages "RelPermalink" "in" $publication_slugs }}
+    
+    {{ if $publications }}
+    
+      {{ partial "publication_list" $publications }}
+      
+      <h2>People</h2>
+      
+      {{ $people_slugs := partial "publication_people" $publications }}
+      {{ $people := where .Site.Pages "RelPermalink" "in" $people_slugs }}
+      
+      {{ partial "person_list" $people }}
+      
+    {{ else }}
+      {{ partial "empty_list" "publications" }}
+    {{ end }}
     
   </article>
 

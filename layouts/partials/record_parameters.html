@@ -1,0 +1,13 @@
+
+{{ $parameters := slice }}
+
+{{ range . }}
+  {{ $parameters = union $parameters .Params.parameters }}
+{{ end }}
+
+{{ $permalinks := slice }}
+{{ range $parameters }}
+  {{ $permalinks = union $permalinks (slice (printf "/parameter/%s/" . | urlize )) }}
+{{ end }}
+
+{{ return $permalinks }}

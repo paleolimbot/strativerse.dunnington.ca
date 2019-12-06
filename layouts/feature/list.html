@@ -15,53 +15,38 @@
     {{ $slug := replace (replace .Path "/_index.md" "") "feature/" "" }}
     {{ $records := where (where .Site.Pages "Type" "record") "Params.feature" $slug }}
     
-    {{ $parameters := (slice) }}
-    {{ $publications := (slice) }}
-    <div class="records feature-records">
-      {{ range $records }}
-        {{ $parameters = union $parameters .Params.parameters }}
-        {{ $publications = union $publications .Params.publications }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ if $records }}
+      {{ partial "record_list" $records }}
+      
+      <h2>Publications</h2>
+      
+      {{ $publication_slugs := partial "record_publications" $records }}
+      {{ $publications := where .Site.Pages "RelPermalink" "in" $publication_slugs }}
+      
+      {{ if $publications }}
+        {{ partial "publication_list" $publications }}
+        
+        <h2>People</h2>
+        
+        {{ $people_slugs := partial "publication_people" $publications }}
+        {{ $people := where .Site.Pages "RelPermalink" "in" $people_slugs }}
+  
+        {{ partial "person_list" $people }}
+        
+      {{ else }}
+        {{ partial "empty_list" "publications" }}
       {{ end }}
-    </div>
+      
+      <h2>Parameters</h2>
+      
+      {{ $parameter_slugs := partial "record_parameters" $records }}
+      {{ $parameters := where .Site.Pages "RelPermalink" "in" $parameter_slugs }}
+      
+      {{ partial "parameter_list" $parameters }}
     
-    <h2>Publications</h2>
-    
-    {{ $people_slugs := (slice) }}
-    
-    <div class="parameters publication-parameters">
-      {{ range $publications }}
-        {{ $publication := site.GetPage (printf "/%s/%s" "publication" (. | urlize)) }}
-        {{ with $publication }}
-          {{ $people_slugs = union $people_slugs $publication.Params.people }}
-          <a href="{{ $publication.RelPermalink }}">{{ $publication.Title }}</a>
-        {{ else }}
-          {{ . }}
-        {{ end }}
-      {{ end }}
-    </div>
-       
-    <h2>Parameters</h2>
-    
-    <div class="parameters publication-parameters">
-      {{ range $parameters }}
-        {{ $parameter := site.GetPage (printf "/%s/%s" "parameter" (. | urlize)) }}
-        {{ with $parameter }}
-          <a href="{{ $parameter.RelPermalink }}">{{ $parameter.Title }}</a>
-        {{ else }}
-          {{ . }}
-        {{ end }}
-      {{ end }}
-    </div>
-    
-    <h2>People</h2>
-    
-    <div class="people people-record">
-      {{ range $people_slugs }}
-        {{ $person := site.GetPage (printf "/%s/%s" "person" (. | urlize)) }}
-        <a href="{{ $person.RelPermalink }}">{{ $person.Title }}</a>
-      {{ end }}
-    </div>
+    {{ else }}
+      {{ partial "empty_list" "records" }}
+    {{ end }}
     
   </article>
 

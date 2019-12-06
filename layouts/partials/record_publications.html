@@ -1,0 +1,13 @@
+
+{{ $publications := slice }}
+
+{{ range . }}
+  {{ $publications = union $publications .Params.publications }}
+{{ end }}
+
+{{ $permalinks := slice }}
+{{ range $publications }}
+  {{ $permalinks = union $permalinks (slice (printf "/publication/%s/" . | urlize)) }}
+{{ end }}
+
+{{ return $permalinks }}

@@ -1,0 +1,13 @@
+
+{{ $people := slice }}
+
+{{ range . }}
+   {{ $people = union $people .Params.people }}
+{{ end }}
+
+{{ $permalinks := slice }}
+{{ range $people }}
+  {{ $permalinks = union $permalinks (slice (printf "/person/%s/" .)) }}
+{{ end }}
+
+{{ return $permalinks }}

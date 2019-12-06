@@ -1,0 +1,8 @@
+
+{{ $slugs := slice }}
+
+{{ range . }}
+   {{ $slugs = union $slugs (slice (replace (replace .Path "/_index.md" "") "publication/" "")) }}
+{{ end }}
+
+{{ return $slugs }}
