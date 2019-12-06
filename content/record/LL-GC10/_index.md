@@ -4,6 +4,7 @@ date: 2011-06-12
 feature: ca/ns/long-lake
 publications:
   - dunnington11
+  - dunnington_etal17
 parameters: 
   - Pb/relative
   - Ti/relative

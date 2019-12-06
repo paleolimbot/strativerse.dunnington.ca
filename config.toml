@@ -33,4 +33,3 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     person = "people"
     record = "records"
     feature = "features"
-    
