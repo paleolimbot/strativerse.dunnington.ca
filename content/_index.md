@@ -1,0 +1,2 @@
+
+The Strativerse isn't anything, yet. Right now it's Dewey Dunnington's collection of sediment core studies for his Ph.D. thesis. It's intended to be a search engine for time-stratigraphic data. Because my Ph.D. thesis is on trace metals in lake sediments, it's almost all about trace metals in lake sediments. In the meantime, you might be interested in some other great projects like [Neotoma](http://neotomadb.org/) and the [Journal of Paleolimnology](https://link.springer.com/journal/10933).
