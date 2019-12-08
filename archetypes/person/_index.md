@@ -4,6 +4,4 @@ family: ""
 given: ""
 date: {{ .Date }}
 ORCID: ""
-other_names: []
-affiliations: []
 ---
