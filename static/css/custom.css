@@ -1,0 +1,12 @@
+
+.article-content a {
+	text-decoration: none;
+	color: blue;
+	border-bottom: none;
+  box-shadow: none;
+}
+
+.article-content a:hover,
+.article-content a:focus {
+  background: inherit;
+}
