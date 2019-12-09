@@ -1,0 +1,43 @@
+{{- /* Generate the search index. */ -}}
+{{- /* Inspired by the hugo-academic theme: https://github.com/gcushen/hugo-academic */ -}}
+{{- $index := slice -}}
+{{- $pages := site.Pages -}}
+
+{{- range $pages -}}
+  {{- /* Do not index drafts or private pages. */ -}}
+  {{- if and (not .Draft) (not .Params.private) -}}
+
+    {{- /* Generate page description. */ -}}
+    {{- $desc := "" -}}
+    {{- if .Params.summary -}}
+      {{- $desc = .Params.summary -}}
+    {{- else if .Params.csl.abstract -}}
+      {{- $desc = .Params.csl.abstract -}}
+    {{- else -}}
+      {{- $desc = .Summary -}}
+    {{- end -}}
+
+    {{- $people := slice -}}
+    {{- if .Params.people }}
+      {{- $people_slugs := partial "publication_people" ( slice .) -}}
+      {{- $people_pages := where .Site.Pages "RelPermalink" "in" $people_slugs -}}
+      {{- range $people_pages -}}
+        {{- $people = union $people (slice .Title) -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $title := .Title | default .Params.csl.title }}
+    {{- $rel_permalink := .RelPermalink -}}
+    {{- $permalink := .Permalink -}}
+    {{- $unique_id := "" -}}
+    {{- if .File -}}
+      {{- $unique_id := .File.UniqueID -}}
+    {{- end -}}
+
+    {{- /* Add page to index. */ -}}
+    {{- $index = $index | append (dict "objectID" $unique_id "authors" $people "date" .Date.UTC.Unix "publishdate" .PublishDate "lastmod" .Lastmod.UTC.Unix "lang" .Lang "permalink" $permalink "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "content" .Plain "kind" .Kind "type" .Type "section" .Section "tags" .Params.Tags) -}}
+
+  {{- end -}}
+{{- end -}}
+
+{{- $index | jsonify -}}

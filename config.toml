@@ -6,6 +6,9 @@ googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
+[outputs]
+  home = [ "HTML", "JSON" ]
+
 [permalinks]
     post = "/:year/:month/:day/:slug/"
 
