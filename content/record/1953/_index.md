@@ -1,0 +1,66 @@
+---
+title: Lake Lehmilampi
+date: '2004-04-30'
+date_collected_latest: '2004-04-30'
+date_collected_earliest: '2004-04-01'
+record_type: core
+medium: lake_sediment
+feature: '788'
+description: ''
+parameters:
+  - varves
+  - Li/extractable
+  - Be/extractable
+  - B/extractable
+  - Na/extractable
+  - Mg/extractable
+  - Al/extractable
+  - P/extractable
+  - S/extractable
+  - K/extractable
+  - Ca/extractable
+  - Sc/extractable
+  - Ti/extractable
+  - V/extractable
+  - Cr/extractable
+  - Mn/extractable
+  - Fe/extractable
+  - Co/extractable
+  - Ni/extractable
+  - Cu/extractable
+  - Zn/extractable
+  - Ga/extractable
+  - As/extractable
+  - Se/extractable
+  - Rb/extractable
+  - Sr/extractable
+  - Y/extractable
+  - Zr/extractable
+  - Nb/extractable
+  - Mo/extractable
+  - Ag/extractable
+  - Cd/extractable
+  - In/extractable
+  - Sn/extractable
+  - Sb/extractable
+  - Cs/extractable
+  - Ba/extractable
+  - Hf/extractable
+  - Au/extractable
+  - Hg/extractable
+  - Tl/extractable
+  - Pb/extractable
+  - Bi/extractable
+  - La/extractable
+  - Ce/extractable
+  - Th/extractable
+  - U/extractable
+  - LOI
+publications:
+  - augustsson_etal10
+geo_error: 0.0
+geometry: ''
+bbox: ~
+longitude: ''
+latitude: ''
+---

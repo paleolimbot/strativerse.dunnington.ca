@@ -1,0 +1,67 @@
+---
+title: Lac Ste. Anne
+date: '2001-09-30'
+date_collected_latest: '2001-09-30'
+date_collected_earliest: '2001-09-01'
+record_type: core
+medium: lake_sediment
+feature: '739'
+description: ''
+parameters:
+  - Pb/210
+  - Cs/137
+  - Be/total
+  - Sr/total
+  - Ba/total
+  - Li/total
+  - Rb/total
+  - Cs/total
+  - Sc/total
+  - Ti/total
+  - V/total
+  - Cr/total
+  - Co/total
+  - Ni/total
+  - Cu/total
+  - Zn/total
+  - Y/total
+  - Zr/total
+  - Nb/total
+  - Mo/total
+  - Ag/total
+  - Cd/total
+  - Lu/total
+  - Hf/total
+  - Ta/total
+  - W/total
+  - Hg/total
+  - Tl/total
+  - Pb/total
+  - Bi/total
+  - As/total
+  - Sb/total
+  - La/total
+  - Ce/total
+  - Pr/total
+  - Nd/total
+  - Sm/total
+  - Eu/total
+  - Gd/total
+  - Tb/total
+  - Dy/total
+  - Ho/total
+  - Er/total
+  - Tm/total
+  - Yb/total
+  - Th/total
+  - U/total
+  - Se/total
+  - P/total
+publications:
+  - donahue_etal06
+geo_error: 0.0
+geometry: ''
+bbox: ~
+longitude: ''
+latitude: ''
+---

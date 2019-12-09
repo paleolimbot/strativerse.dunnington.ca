@@ -1,6 +1,6 @@
 
 <ul class="publications">
   {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      <li><a href="{{ .RelPermalink }}">{{ .Params.csl.title }}</a></li>
   {{ end }}
 </ul>

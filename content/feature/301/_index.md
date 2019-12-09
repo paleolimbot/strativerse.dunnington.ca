@@ -1,0 +1,18 @@
+---
+title: Little Pine Pond
+feature_type: water_body
+description: 'Near Harrietstown (Franklin County), New York (PIRLA ID: ADIR033)'
+geometry: POLYGON ((-74.15096490000001 44.260036, -74.14942000000001 44.2601897, -74.14942000000001
+  44.2598209, -74.1496345 44.2593291, -74.1500637 44.2592062, -74.1510078 44.2591754,
+  -74.15199490000001 44.2593291, -74.15229530000001 44.2594213, -74.1516945 44.2598209,
+  -74.15096490000001 44.260036))
+geo_error: 100.0
+bbox:
+  xmin: -74.1522953
+  ymin: 44.2591754
+  xmax: -74.14942
+  ymax: 44.2601897
+longitude: -74.1506434
+latitude: 44.2596382
+OSM: https://www.openstreetmap.org/way/31750505
+---

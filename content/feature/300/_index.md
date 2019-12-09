@@ -1,0 +1,18 @@
+---
+title: Little Echo Pond
+feature_type: water_body
+description: 'Near Santa Clara (Franklin County), New York (PIRLA ID: ADIR032)'
+geometry: POLYGON ((-74.35800519999999 44.3059282, -74.3576111 44.3060502, -74.35707859999999
+  44.3061874, -74.3564822 44.3061035, -74.3563011 44.3058673, -74.3565461 44.3055776,
+  -74.3570041 44.3054557, -74.3575153 44.3054785, -74.35794129999999 44.3055776, -74.35809039999999
+  44.3057529, -74.35800519999999 44.3059282))
+geo_error: 100.0
+bbox:
+  xmin: -74.3580904
+  ymin: 44.3054557
+  xmax: -74.3563011
+  ymax: 44.3061874
+longitude: -74.3571752
+latitude: 44.3058087
+OSM: https://www.openstreetmap.org/way/124117202
+---

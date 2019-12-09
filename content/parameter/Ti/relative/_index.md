@@ -1,4 +1,5 @@
 ---
-title: "Ti (relative)"
-description: ""
+title: Ti (relative)
+old_id: 252
+description: Titanium
 ---
