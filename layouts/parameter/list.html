@@ -26,13 +26,6 @@
     
       {{ partial "publication_list" $publications }}
       
-      <h2>People</h2>
-      
-      {{ $people_slugs := partial "publication_people" $publications }}
-      {{ $people := where .Site.Pages "RelPermalink" "in" $people_slugs }}
-      
-      {{ partial "person_list" $people }}
-    
     {{ else }}
     
       {{ partial "empty_list" "publications" }}

@@ -11,6 +11,13 @@
           <li>
             <a href="https://github.com/{{ .Site.Params.gitHubRepo }}" target="_blank">edit on GitHub</a>
           </li>
+          {{ if .GitInfo }}
+          <li>
+            <a href="https://github.com/{{ .Site.Params.gitHubRepo }}/commit/{{ .GitInfo.Hash }}/content/{{ .Path }}">
+              Last updated {{ .GitInfo.AuthorDate }}
+            </a>
+          </li>
+          {{ end }}
           {{ end }}
         </ul>
 
