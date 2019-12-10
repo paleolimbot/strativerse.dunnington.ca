@@ -1,0 +1,11 @@
+
+# Search
+
+- id: search_placeholder
+  translation: Search...
+
+- id: search_results
+  translation: results found
+
+- id: search_no_results
+  translation: No results found

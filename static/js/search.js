@@ -164,13 +164,36 @@ function render(template, data) {
   return template;
 }
 
+function removeQueryParamsFromUrl() {
+  if (window.history.replaceState) {
+    let urlWithoutSearchParams = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.hash;
+    window.history.replaceState({path:urlWithoutSearchParams}, '', urlWithoutSearchParams);
+  }
+}
+
+function toggleSearchDialog() {
+  if ($('body').hasClass('searching')) {
+    // Clear search query and hide search modal.
+    $('[id=search-query]').blur();
+    $('body').removeClass('searching');
+
+    // Remove search query params from URL as user has finished searching.
+    removeQueryParamsFromUrl();
+  } else {
+    // Show search and hide content
+    $('body').addClass('searching');
+    $('.search-results').css({opacity: 0, visibility: 'visible'}).animate({opacity: 1}, 200);
+    $('#search-query').focus();
+  }
+}
+
 /* ---------------------------------------------------------------------------
 * Initialize.
 * --------------------------------------------------------------------------- */
 
 // If Academic's in-built search is enabled and Fuse loaded, then initialize it.
 if (typeof Fuse === 'function') {
-// Wait for Fuse to initialize.
+  // Wait for Fuse to initialize.
   $.getJSON(search_config.indexURI, function (search_index) {
     let fuse = new Fuse(search_index, fuseOptions);
 
@@ -194,5 +217,10 @@ if (typeof Fuse === 'function') {
         }, 250));
       }
     });
+  });
+  
+  $(".js-search").on("click", function(e) {
+    e.preventDefault();
+    toggleSearchDialog();
   });
 }

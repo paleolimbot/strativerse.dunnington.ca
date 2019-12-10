@@ -10,3 +10,82 @@
 .article-content a:focus {
   background: inherit;
 }
+
+/* Search (inspired by Hugo Academic) */
+
+#search {
+  display: none;
+  margin-top: 40px;
+}
+
+.searching #search  {
+  display: block;
+}
+
+#search-toggle-off {
+  display: none;
+}
+
+.searching .content {
+  display: none;
+}
+
+.searching #search-toggle-on {
+  display: none;
+}
+
+.searching #search-toggle-off {
+  display: inherit;
+}
+
+.searching #search-box #search-query {
+  width: 100%
+}
+
+.container-search {
+  width: 700px;
+  padding-top: 70px
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search-box {
+  position: relative;
+  margin-bottom: 0.5rem
+}
+
+#search-box::before {
+  font-family: 'font awesome 5 free';
+  font-weight: 900;
+  content: "\f002";
+  font-size: 1rem;
+  opacity: 0.25;
+  line-height: 1rem;
+  position: absolute;
+  left: 0.7rem;
+  top: 0.6rem;
+  overflow-x:hidden
+}
+
+#search-box #search-query {
+  border: 1px solid #dedede;
+  border-radius: 1rem;
+  padding: 1rem 1rem 1rem 2rem;
+  width: 250px;
+  line-height: 1rem;
+  height: 1rem;
+  font-size: 1em;
+}
+
+.search-hit em {
+  font-style: normal;
+  background-color: #ffe0b2;
+  color: #e65100;
+  border-bottom: 1px solid #e65100
+}
+
+.search-hit {
+  padding-bottom: 10px;
+}
