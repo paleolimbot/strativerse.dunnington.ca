@@ -1,14 +1,17 @@
 ---
-title: "{{ .Name | title }}"
-date: {{ .Date }}
-features: []
-publications: []
+title: ''
+date: ''
+date_collected_latest: ''
+date_collected_earliest: ''
+record_type: core
+medium: lake_sediment
+feature: ''
+description: ''
 parameters: []
-collected-earliest: ""
-collected-latest: ""
-medium: ""
-record-type: ""
-longitude: ""
-latitude: ""
-geo-error: ""
+publications:  []
+geo_error: 0.0
+geometry: ''
+bbox: ~
+longitude: ''
+latitude: ''
 ---

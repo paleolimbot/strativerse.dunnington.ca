@@ -1,7 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-family: ""
-given: ""
-date: {{ .Date }}
-ORCID: ""
+title: ''
+given: ''
+family: ''
+ORCID: ''
 ---

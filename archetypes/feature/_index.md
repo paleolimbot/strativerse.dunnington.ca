@@ -1,8 +1,11 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-longitude: ""
-latitude: ""
-geo-error: ""
-geometry: ""
+title: ''
+feature_type: water_body
+description: ''
+geometry: ''
+geo_error: 0.0
+bbox: ~
+longitude: ''
+latitude: ''
+OSM: ''
 ---

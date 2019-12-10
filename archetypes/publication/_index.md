@@ -1,6 +1,5 @@
 ---
-title: ""
-date: {{ .Date }}
+date: ''
 people: []
-csl: {}
+csl: ~
 ---

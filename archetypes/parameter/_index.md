@@ -1,4 +1,4 @@
 ---
-title: "{{ replace (replaceRE ".*?parameter/" "" .Path) "/_index.md" "" }}"
-description: ""
+title: '{{ replace (replaceRE ".*?parameter/" "" .Path) "/_index.md" "" }}'
+description: ''
 ---
