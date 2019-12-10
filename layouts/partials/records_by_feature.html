@@ -1,10 +1,10 @@
 
-<ul class="records-by-feature">
+<ul class="records-by-feature object-list-rows">
 {{ range .GroupByParam "feature" }}
   {{ $feature := site.GetPage (printf "/%s/%s" "feature" (.Key | urlize)) }}
   <li>
-    <a class="feature-link" href="{{ $feature.RelPermalink }}">{{ $feature.Title }}</a>:
-    <ul class="records">
+    <a class="feature-link" href="{{ $feature.RelPermalink }}">{{ $feature.Title }}</a>
+    <ul class="records object-list">
       {{ range .Pages }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
       {{ end }}

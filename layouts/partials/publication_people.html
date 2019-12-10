@@ -2,7 +2,7 @@
 {{ $people := slice }}
 
 {{ range . }}
-   {{ $people = union $people .Params.people }}
+  {{ $people = union $people .Params.people }}
 {{ end }}
 
 {{ $permalinks := slice }}

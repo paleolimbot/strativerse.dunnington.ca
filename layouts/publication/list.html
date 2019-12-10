@@ -10,10 +10,15 @@
     {{ $taxonomy_single := "person" }}
     {{ with .Param $taxonomy }}
     <div class="article-tags article-people">
+      {{ $last_author_break := sub (len .) 2 }}
       {{ range $index, $value := . }}
-      {{ $term_page := site.GetPage (printf "/%s/%s" $taxonomy_single (. | urlize)) }}
-      {{ $term_text := $term_page.Params.title | default ($value | markdownify) }}
-      <a href="{{ $term_page.RelPermalink }}">{{ $term_text }}</a>
+        {{ $term_page := site.GetPage (printf "/%s/%s" $taxonomy_single (. | urlize)) }}
+        {{ $term_text := $term_page.Params.title | default ($value | markdownify) }}
+        <a href="{{ $term_page.RelPermalink }}">{{ $term_text }}</a>
+        {{- if (and (eq $index $last_author_break) (eq $index 0)) }} and
+        {{- else if (eq $index $last_author_break) }}, and
+        {{- else if (lt $index $last_author_break)}}, 
+        {{ end }}
       {{ end }}
     
     {{ end }}

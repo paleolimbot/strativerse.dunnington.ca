@@ -1,0 +1,19 @@
+{{ $author_summary := "(No author)" }}
+{{ if .Params.people }}
+  {{ $last_names := slice }}
+  {{ $people := .Params.people }}
+  {{ range $people }}
+    {{ $person := site.GetPage (printf "/%s/%s" "person" (. | urlize)) }}
+    {{ $last_names = union $last_names (slice $person.Params.family) }}
+  {{ end }}
+  {{ if eq (len $people) 1 }}
+    {{ $author_summary = delimit $last_names "" }}
+  {{ else if eq (len $people) 0 }}
+    {{ $author_summary =  "(No author)"}}
+  {{ else if  eq (len $people) 2 }}
+    {{ $author_summary = delimit $last_names " and " }}
+  {{ else if  gt (len $people) 2 }}
+    {{ $author_summary = delimit (union (first 1 $last_names) (slice "et al.")) " " }}
+  {{ end }}
+{{ end }}
+{{ return $author_summary }}

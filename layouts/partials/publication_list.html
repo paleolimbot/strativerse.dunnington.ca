@@ -1,6 +1,10 @@
 
-<ul class="publications">
+<ul class="publications object-list-rows">
   {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .Params.csl.title }}</a></li>
+    <li>
+      <a href="{{ .RelPermalink }}">{{ partial "publication_etal.html" . }}</a>
+      <span class="article-date">{{ .Date.Format "2006" }}</span>
+      {{ .Params.csl.title }}
+    </li>
   {{ end }}
 </ul>

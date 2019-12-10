@@ -1,5 +1,7 @@
 
-.article-content a {
+/* General */
+
+.article-content a, a {
 	text-decoration: none;
 	color: blue;
 	border-bottom: none;
@@ -9,6 +11,35 @@
 .article-content a:hover,
 .article-content a:focus {
   background: inherit;
+}
+
+/* Object lists */
+
+.object-list-rows {
+  list-style: none;
+  padding-left: 0;
+}
+
+.object-list-rows li {
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.object-list {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.2;
+}
+
+.object-list li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0.2em;
+}
+
+.feature-link {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 /* Search (inspired by Hugo Academic) */
@@ -44,7 +75,6 @@
 
 .container-search {
   width: 700px;
-  padding-top: 70px
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
