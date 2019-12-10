@@ -532,9 +532,10 @@ new_publication <- function(csl, person_index = sv_people()) {
       })
     )
   
-  date_year <- csl$issued$`date-parts`[[1]][[1]]
-  date_month <- csl$issued$`date-parts`[[1]][[2]] %||% 1
-  date_day <- csl$issued$`date-parts`[[1]][[3]] %||% 1
+  issued <- csl$issued$`date-parts`[[1]]
+  date_year <- issued[[1]]
+  date_month <- if (length(issued) >= 2) issued[[2]] else 1
+  date_day <- if (length(issued) >= 3) issued[[3]] else 1
   date <- lubridate::make_date(date_year, date_month, date_day)
   if (is.na(date)) {
     rlang::abort(glue::glue("No such date: {date_year}-{date_month}-{date_day}"))
@@ -548,7 +549,7 @@ new_publication <- function(csl, person_index = sv_people()) {
   write_content(
     modify_content(
       content, 
-      people = author_df$slug_possibly_new,
+      people = as.list(author_df$slug_possibly_new),
       date = as.character(date),
       csl = csl
     )
