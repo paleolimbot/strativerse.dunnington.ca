@@ -27,13 +27,6 @@
       
         {{ partial "records_by_feature" $records }}
         
-        <h2>Parameters</h2>
-        
-        {{ $parameter_slugs := partial "record_parameters" $records }}
-        {{ $parameters := where .Site.Pages "RelPermalink" "in" $parameter_slugs }}
-
-        {{ partial "parameter_list" $parameters }}
-        
       {{ else }}
         {{ partial "empty_list" "records" }}
       {{ end }}
