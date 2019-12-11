@@ -590,3 +590,23 @@ import_publications <- function(csl_json = rbbt::bbt_bib_zotero("csljson", rbbt:
   
   invisible(map_chr(csl, new_publication, person_index = person_index))
 }
+
+# ---- editors ----
+
+edit_geometry <- function(path = sv_editing_url() %||% clipr::read_clip()) {
+  f <- read_list(path)
+  if (is.null(f$geometry) || (f$geometry == "")) {
+    # mapedit can't do an empty geometry set
+    geom <- sf::st_as_sfc(
+      "LINESTRING (-170 -50, 170 50)",
+      crs = 4326
+    )
+  } else {
+    geom <- sf::st_as_sfc(f$geometry, crs = 4326)
+  }
+  
+  geom_sf <- tibble::tibble(geometry = geom) %>% sf::st_as_sf()
+  result <- mapedit::editFeatures(geom_sf)
+  new_f <- modify_content(f, geometry = sf::st_as_text(result$geometry)[1])
+  write_content(new_f)
+}
