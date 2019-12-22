@@ -5,6 +5,7 @@ if (file.exists("~/.Rprofile")) {
 
 
 require(tidyverse)
+source("_sources/edit_feature/app.R")
 
 # ---- Dev server ----
 
