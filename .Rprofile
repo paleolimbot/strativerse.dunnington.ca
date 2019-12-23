@@ -596,18 +596,32 @@ import_publications <- function(csl_json = rbbt::bbt_bib_zotero("csljson", rbbt:
 
 edit_geometry <- function(path = sv_editing_url() %||% clipr::read_clip()) {
   f <- read_list(path)
-  if (is.null(f$geometry) || (f$geometry == "")) {
-    # mapedit can't do an empty geometry set
-    geom <- sf::st_as_sfc(
-      "LINESTRING (-170 -50, 170 50)",
-      crs = 4326
-    )
+  result <- edit_wkt(f$geometry, f$title)
+  if (!is.null(result)) {
+    if (result == "") {
+      new_f <- modify_content(
+        f, 
+        geometry = "", 
+        bbox = NULL, 
+        latitude = "", 
+        longitude = "", 
+        geo_error = 0
+      )
+    } else {
+      geo <- sf::st_as_sfc(result)
+      geo_center <- suppressWarnings(sf::st_coordinates(sf::st_centroid(geo)))
+      bbox <- sf::st_bbox(geo)
+      new_f <- modify_content(
+        f, 
+        geometry = result, 
+        bbox = as.list(bbox), 
+        longitude = geo_center[1],
+        latitude = geo_center[2]
+      )
+    }
+    
+    write_content(new_f)
   } else {
-    geom <- sf::st_as_sfc(f$geometry, crs = 4326)
+    invisible(NULL)
   }
-  
-  geom_sf <- tibble::tibble(geometry = geom) %>% sf::st_as_sf()
-  result <- mapedit::editFeatures(geom_sf)
-  new_f <- modify_content(f, geometry = sf::st_as_text(result$geometry)[1])
-  write_content(new_f)
 }
