@@ -24,6 +24,7 @@ parameters:
   - grain_size
 publications:
   - shimp_etal71
+  - leland_etal73
 geo_error: 0.0
 geometry: ''
 bbox: ~
