@@ -11,8 +11,10 @@ parameters:
   - Pb/210
   - H2O
   - Ra/262
+  - Pb/total
 publications:
   - robbins_edgington75
+  - edgington_robbins76
 geo_error: 0.0
 geometry: ''
 bbox: ~
