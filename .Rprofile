@@ -625,3 +625,9 @@ edit_geometry <- function(path = sv_editing_url() %||% clipr::read_clip()) {
     invisible(NULL)
   }
 }
+
+# -------- fix object masking ---------
+
+filter <- function(...) {
+  dplyr::filter(...)
+}
