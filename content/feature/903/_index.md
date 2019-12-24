@@ -1,6 +1,6 @@
 ---
 title: Rockefeller Plateau
-feature_type: water_body
+feature_type: glacier
 description: ''
 geometry: POINT (-135 -80)
 geo_error: 100000.0
