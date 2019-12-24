@@ -30,6 +30,7 @@ publications:
   - davis_etal94
   - kahl_etal84
   - hanson_etal82
+  - davis_etal84
 geo_error: 0.0
 geometry: ''
 bbox: ~
