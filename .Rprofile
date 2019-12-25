@@ -209,7 +209,7 @@ open_people <- function(url = clipr::read_clip()) {
 # ---- Object readers ----
 
 read_list <- function(fname = clipr::read_clip(), pb = NULL) {
-  if (!is.null(pb)) pb$tick()
+  if (!is.null(pb)) pb$tick()$print()
   
   fname <- url_to_path(fname)
   if (!file.exists(fname)) {
@@ -227,7 +227,21 @@ read_list <- function(fname = clipr::read_clip(), pb = NULL) {
     lst <- list()
   }
   
-  c(list(content_type = content_type, slug = slug, file = as.character(fname)), lst)
+  lst <- c(list(content_type = content_type, slug = slug, file = as.character(fname)), lst)
+  
+  if ("publications" %in% names(lst)) {
+    lst$publications <- as.list(lst$publications)
+  }
+  
+  if ("parameters" %in% names(lst)) {
+    lst$parameters <- as.list(lst$parameters)
+  }
+  
+  if ("people" %in% names(lst)) {
+    lst$people <- as.list(lst$people)
+  }
+  
+  lst
 }
 
 read_df <- function(fname = clipr::read_clip(), pb = NULL) {
