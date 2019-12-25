@@ -20,6 +20,7 @@ publications:
   - dixit_etal89
   - blais95
   - blais_etal95
+  - dixit86
 geo_error: 0.0
 geometry: ''
 bbox: ~
