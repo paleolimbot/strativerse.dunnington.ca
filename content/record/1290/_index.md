@@ -29,6 +29,7 @@ publications:
   - davis_etal94
   - norton_etal92
   - norton_etal90
+  - norton_kahl86
 geo_error: 0.0
 geometry: ''
 bbox: ~

@@ -6,7 +6,7 @@ date_collected_earliest: '1982-01-01'
 record_type: core
 medium: lake_sediment
 feature: '345'
-description: ''
+description: 'At least 3 cores'
 parameters:
   - Cs/137
   - Pb/210
@@ -29,6 +29,7 @@ publications:
   - norton_etal92
   - kingston_etal90
   - norton_etal90
+  - norton_kahl86
 geo_error: 0.0
 geometry: ''
 bbox: ~

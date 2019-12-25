@@ -29,6 +29,7 @@ publications:
   - kahl_etal84
   - davis_etal94
   - norton_etal90
+  - norton_kahl86
 geo_error: 0.0
 geometry: POINT (-68.07904071538411 44.63808718785516)
 bbox:

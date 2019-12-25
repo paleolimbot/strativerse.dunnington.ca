@@ -30,6 +30,7 @@ publications:
   - charles_etal90
   - blais95
   - blais_etal95
+  - norton_kahl86
 geo_error: 0.0
 geometry: ''
 bbox: ~
