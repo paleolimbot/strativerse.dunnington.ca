@@ -16,6 +16,7 @@ parameters:
   - Pb/extractable
   - scaled_chrysophytes
   - Zn/extractable
+  - diatoms
 publications:
   - dixit_etal89
   - blais95

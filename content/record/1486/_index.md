@@ -16,6 +16,7 @@ parameters:
   - Fe/extractable
   - Al/extractable
   - scaled_chrysophytes
+  - diatoms
 publications:
   - dixit_etal89
   - blais95
