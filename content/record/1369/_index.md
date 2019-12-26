@@ -1,8 +1,8 @@
 ---
 title: East Richardson Pond
-date: '1982-12-31'
-date_collected_latest: '1982-12-31'
-date_collected_earliest: ''
+date: '1978-11-12'
+date_collected_latest: '1978-11-12'
+date_collected_earliest: '1978-11-12'
 record_type: core
 medium: lake_sediment
 feature: '491'
@@ -16,8 +16,15 @@ parameters:
   - Pb/total
   - Ti/total
   - Zn/total
+  - H2O
+  - K/total
+  - Na/total
+  - Al/total
+  - Mg/total
+  - LOI
 publications:
   - hanson_etal82
+  - williams80
 geo_error: 0.0
 geometry: ''
 bbox: ~
