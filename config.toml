@@ -13,11 +13,27 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     post = "/:year/:month/:day/:slug/"
 
 [[menu.main]]
+    name = "Records"
+    url = "/record/"
+    weight = 10
+    
+[[menu.main]]
+    name = "Features"
+    url = "/feature/"
+    weight = 20
+
+[[menu.main]]
+    name = "Publications"
+    url = "/publication/"
+    weight = 30
+    
+[[menu.main]]
     name = "About"
     url = "/about/"
+    weight = 40
 
 [params]
-    description = "A collection of time-stratigraphic publications."
+    description = "A collection of time-stratigraphic records."
 
     # path to the favicon, under "static"
     favicon = "images/logo.png"
