@@ -422,8 +422,8 @@ new_feature <- function(title, feature_type = c("water_body", "glacier", "bog"))
 }
 
 new_record <- function(title, feature = sv_editing_url() %||% clipr::read_clip(), 
-                       record_type = "core", 
-                       medium = c("lake_sediment", "glacier_ice", "marine_sediment", "peat")) {
+                       record_type = c("core", "samples", "section", "sensor", "other"), 
+                       medium = c("lake_sediment", "glacier_ice", "marine_sediment", "peat", "coral")) {
   if (!is.character(title) || !(length(title) == 1)) {
     rlang::abort("`title` must be a character scalar")
   }
