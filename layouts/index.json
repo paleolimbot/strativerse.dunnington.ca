@@ -19,8 +19,7 @@
 
     {{- $people := slice -}}
     {{- if .Params.people }}
-      {{- $people_slugs := partial "publication_people" ( slice .) -}}
-      {{- $people_pages := where .Site.Pages "RelPermalink" "in" $people_slugs -}}
+      {{- $people_pages := partial "fun/publications_people" ( slice .) -}}
       {{- range $people_pages -}}
         {{- $people = union $people (slice .Title) -}}
       {{- end -}}

@@ -49,10 +49,7 @@
       {{ partial "records_by_feature" $records }}
       
       <h2>Parameters</h2>
-      
-      {{ $parameter_slugs := partial "record_parameters" $records }}
-      {{ $parameters := where .Site.Pages "RelPermalink" "in" $parameter_slugs }}
-      
+      {{ $parameters := partial "fun/records_parameters" $records }}
       {{ partial "parameter_list" $parameters}}
       
     {{ else }}

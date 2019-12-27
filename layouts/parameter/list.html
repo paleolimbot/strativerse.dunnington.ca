@@ -14,23 +14,11 @@
     {{ $records := where (where .Site.Pages "Type" "record") "Params.parameters" "intersect" (slice $slug) }}
 
     <h2>Records by feature</h2>
-    
     {{ partial "records_by_feature" $records }}
     
     <h2>Publications</h2>
-    
-    {{ $pub_slugs := partial "record_publications" $records }}
-    {{ $publications := where .Site.Pages "RelPermalink" "in" $pub_slugs }}
-    
-    {{ if $publications }}
-    
-      {{ partial "publication_list" $publications }}
-      
-    {{ else }}
-    
-      {{ partial "empty_list" "publications" }}
-    
-    {{ end }}
+    {{ $publications := partial "fun/records_publications" $records }}
+    {{ partial "publication_list" $publications }}
     
   </article>
 

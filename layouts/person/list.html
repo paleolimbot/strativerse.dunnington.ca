@@ -20,7 +20,7 @@
       
       <h2>Records by feature</h2>
       
-      {{ $publication_slugs := partial "publication_slugs" $publications }}
+      {{ $publication_slugs := partial "fun/publications_slugs" $publications }}
       {{ $records := where (where .Site.Pages "Type" "record") "Params.publications" "intersect" $publication_slugs }}
       
       {{ if $records }}

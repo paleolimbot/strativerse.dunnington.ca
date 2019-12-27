@@ -10,6 +10,21 @@
       {{ $feature := site.GetPage (printf "/%s/%s" "feature" (.Params.feature | urlize)) }}
       Collected from
       <a href="{{ $feature.RelPermalink }}">{{ $feature.Title }}</a>
+      {{ if not .Params.date_collected_earliest }}
+        before <span class="article-date">{{ .Date.Format "December 2006"}}</span>
+      {{ else }}
+        {{ $early_date := time .Params.date_collected_earliest }}
+        {{ if eq $early_date.Month .Date.Month }}
+          in <span class="article-date">{{ .Date.Format "December 2006" }}</span>
+        {{ else if eq $early_date.Year  .Date.Year }}
+          in <span class="article-date">{{ .Date.Format "2006" }}</span>
+        {{ else }}
+          between
+          <span class="article-date">{{ $early_date.Format "December 2006"}}</span>
+          and
+          <span class="article-date">{{ .Date.Format "December 2006"}}</span>
+        {{ end }}
+      {{ end }}
     </div>
 
     <div class="article-content">
@@ -24,25 +39,20 @@
         {{ with $parameter }}
           <a href="{{ $parameter.RelPermalink }}">{{ $parameter.Title }}</a>
         {{ else }}
+          {{ errorf "There is no parameter named '%s'" .}}
           {{ . }}
         {{ end }}
       {{ end }}
     </div>
     
     <h2>Publications</h2>
-    
-    {{ $publication_slugs := partial "record_publications" (slice .)}}
-    {{ $publications := where .Site.Pages "RelPermalink" "in" $publication_slugs }}
-    
+    {{ $publications := partial "fun/records_publications" (slice .)}}
     {{ if $publications }}
     
       {{ partial "publication_list" $publications }}
       
       <h2>People</h2>
-      
-      {{ $people_slugs := partial "publication_people" $publications }}
-      {{ $people := where .Site.Pages "RelPermalink" "in" $people_slugs }}
-      
+      {{ $people := partial "fun/publications_people" $publications }}
       {{ partial "person_list" $people }}
       
     {{ else }}

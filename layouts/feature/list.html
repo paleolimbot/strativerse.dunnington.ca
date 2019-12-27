@@ -20,17 +20,13 @@
       
       <h2>Publications</h2>
       
-      {{ $publication_slugs := partial "record_publications" $records }}
-      {{ $publications := where .Site.Pages "RelPermalink" "in" $publication_slugs }}
-      
+      {{ $publications := partial "fun/records_publications" $records }}
       {{ if $publications }}
         {{ partial "publication_list" $publications }}
         
         <h2>People</h2>
         
-        {{ $people_slugs := partial "publication_people" $publications }}
-        {{ $people := where .Site.Pages "RelPermalink" "in" $people_slugs }}
-  
+        {{ $people := partial "fun/publications_people" $publications }}
         {{ partial "person_list" $people }}
         
       {{ else }}
@@ -39,9 +35,7 @@
       
       <h2>Parameters</h2>
       
-      {{ $parameter_slugs := partial "record_parameters" $records }}
-      {{ $parameters := where .Site.Pages "RelPermalink" "in" $parameter_slugs }}
-      
+      {{ $parameters := partial "fun/records_parameters" $records }}
       {{ partial "parameter_list" $parameters }}
     
     {{ else }}

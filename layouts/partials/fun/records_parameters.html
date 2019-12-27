@@ -10,4 +10,4 @@
   {{ $permalinks = union $permalinks (slice (printf "/parameter/%s/" . | urlize )) }}
 {{ end }}
 
-{{ return $permalinks }}
+{{ return where site.Pages "RelPermalink" "in" $permalinks }}

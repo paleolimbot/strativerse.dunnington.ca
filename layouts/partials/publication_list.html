@@ -1,19 +1,25 @@
 
-<ul class="publications object-list-rows">
-  {{ range . }}
-    <li>
-      <a href="{{ .RelPermalink }}">{{ partial "publication_etal.html" . }}</a>
-      <span class="article-date">{{ .Date.Format "2006" }}</span>
-      {{ .Params.csl.title }}
-      {{ if .Params.csl.DOI }}
-      <span class="publication-link">
-        <a href="https://doi.org/{{ .Params.csl.DOI }}" target="_blank">doi:{{ .Params.csl.DOI }}</a>
-      </span>
-      {{ else if .Params.csl.URL }}
-      <span class="publication-link">
-        <a href="{{ .Params.csl.URL }}" target="_blank">{{ .Params.csl.URL }}</a>
-      </span>
-      {{ end }}
-    </li>
-  {{ end }}
-</ul>
+{{ if . }}
+  <ul class="publications object-list-rows">
+    {{ range . }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ partial "publication_etal.html" . }}</a>
+        <span class="article-date">{{ .Date.Format "2006" }}</span>
+        {{ .Params.csl.title }}
+        {{ if .Params.csl.DOI }}
+        <span class="publication-link">
+          <a href="https://doi.org/{{ .Params.csl.DOI }}" target="_blank">doi:{{ .Params.csl.DOI }}</a>
+        </span>
+        {{ else if .Params.csl.URL }}
+        <span class="publication-link">
+          <a href="{{ .Params.csl.URL }}" target="_blank">{{ .Params.csl.URL }}</a>
+        </span>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ else }}
+
+  {{ partial "emtpy_list" "publications" }}
+  
+{{ end }}
