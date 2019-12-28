@@ -259,12 +259,14 @@ read_df <- function(fname = clipr::read_clip(), pb = NULL) {
 }
 
 content_files <- function(content_type) {
-  list.files(
+  files <- list.files(
     file.path("content", content_type),
     pattern = "_index\\.md$", 
     recursive = TRUE,
     full.names = TRUE
   )
+  # filter out the base _index.md for each content type
+  files[basename(dirname(files)) != content_type]
 }
 
 read_content_list <- function(content_type, pb = progress_estimated) {
