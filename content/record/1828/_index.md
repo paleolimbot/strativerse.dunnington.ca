@@ -9,7 +9,7 @@ feature: '706'
 description: ''
 parameters:
   - Hg/total
-  - Cl/Cl-
+  - Cl/chloride
   - S/SO4-2
 publications:
   - schuster_etal02
