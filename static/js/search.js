@@ -12,7 +12,10 @@
 let search_config = {
   threshold: 0.3,
   minLength: 2,
-  indexURI: "/index.json"
+  // this is defined in partial "footer"
+  // there is an index.json anywhere that partial "search"
+  // is used
+  indexURI: strativerseIndexURI
 };
 
 let i18n = {
@@ -36,9 +39,8 @@ let fuseOptions = {
   keys: [
     {name:'title', weight:0.99}, /* 1.0 doesn't work o_O */
     {name:'summary', weight:0.6},
-    {name:'authors', weight:0.5},
-    {name:'tags', weight:0.5},
-    {name:'categories', weight:0.5}
+    {name:'blurb', weight:0.3},
+    {name:'relpermalink', weight:0.7}
   ]
 };
 
@@ -97,33 +99,28 @@ function searchAcademic(query, fuse) {
 // Parse search results.
 function parseResults(query, results) {
   $.each( results, function(key, value) {
-    let content_key = value.item.section;
-    let content = "";
+    let content_key = value.item.type;
+    let content = value.item.blurb;
     let snippet = "";
     let snippetHighlights = [];
 
-    // Show abstract in results for content types where the abstract is often the primary content.
-    if (["publication", "talk"].includes(content_key)) {
-      content = value.item.summary;
-    } else {
-      content = value.item.content;
-    }
+    
 
     if ( fuseOptions.tokenize ) {
       snippetHighlights.push(query);
     } else {
       $.each( value.matches, function(matchKey, matchValue) {
-        if (matchValue.key == "content") {
+        if (matchValue.key == "blurb") {
           let start = (matchValue.indices[0][0]-summaryLength>0) ? matchValue.indices[0][0]-summaryLength : 0;
-          let end = (matchValue.indices[0][1]+summaryLength<content.length) ? matchValue.indices[0][1]+summaryLength : content.length;
-          snippet += content.substring(start, end);
+          let end = (matchValue.indices[0][1]+summaryLength<blurb.length) ? matchValue.indices[0][1]+summaryLength : blurb.length;
+          snippet += blurb.substring(start, end);
           snippetHighlights.push(matchValue.value.substring(matchValue.indices[0][0], matchValue.indices[0][1]-matchValue.indices[0][0]+1));
         }
       });
     }
 
     if (snippet.length < 1) {
-      snippet += value.item.summary;  // Alternative fallback: `content.substring(0, summaryLength*2);`
+      snippet += value.item.blurb;  // Alternative fallback: `content.substring(0, summaryLength*2);`
     }
 
     // Load template.
@@ -182,7 +179,6 @@ function toggleSearchDialog() {
   } else {
     // Show search and hide content
     $('body').addClass('searching');
-    $('.search-results').css({opacity: 0, visibility: 'visible'}).animate({opacity: 1}, 200);
     $('#search-query').focus();
   }
 }
@@ -191,8 +187,8 @@ function toggleSearchDialog() {
 * Initialize.
 * --------------------------------------------------------------------------- */
 
-// If Academic's in-built search is enabled and Fuse loaded, then initialize it.
-if (typeof Fuse === 'function') {
+// If search exists, is enabled, and Fuse loaded, then initialize it.
+if (typeof Fuse === 'function' && (document.getElementById('search') !== null)) {
   // Wait for Fuse to initialize.
   $.getJSON(search_config.indexURI, function (search_index) {
     let fuse = new Fuse(search_index, fuseOptions);
@@ -200,7 +196,6 @@ if (typeof Fuse === 'function') {
     // On page load, check for search query in URL.
     if (query = getSearchQuery('q')) {
       $("body").addClass('searching');
-      $('.search-results').css({opacity: 0, visibility: "visible"}).animate({opacity: 1},200);
       $("#search-query").val(query);
       $("#search-query").focus();
       initSearch(true, fuse);
@@ -217,10 +212,5 @@ if (typeof Fuse === 'function') {
         }, 250));
       }
     });
-  });
-  
-  $(".js-search").on("click", function(e) {
-    e.preventDefault();
-    toggleSearchDialog();
   });
 }

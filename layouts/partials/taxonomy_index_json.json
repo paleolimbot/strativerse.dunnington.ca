@@ -1,9 +1,8 @@
 {{- /* Generate the search index. */ -}}
 {{- /* Inspired by the hugo-academic theme: https://github.com/gcushen/hugo-academic */ -}}
 {{- $index := slice -}}
-{{- $pages := site.Pages -}}
 
-{{- range $pages -}}
+{{- range .Pages -}}
   {{- /* Do not index drafts or private pages. */ -}}
   {{- if and (not .Draft) (not .Params.private) -}}
 

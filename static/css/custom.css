@@ -44,46 +44,15 @@
 
 /* Search (inspired by Hugo Academic) */
 
-#search {
-  display: none;
-  margin-top: 40px;
-}
-
-.searching #search  {
-  display: block;
-}
-
-#search-toggle-off {
-  display: none;
-}
-
-.searching .content {
-  display: none;
-}
-
-.searching #search-toggle-on {
-  display: none;
-}
-
-.searching #search-toggle-off {
-  display: inherit;
-}
-
-.searching #search-box #search-query {
-  width: 100%
-}
-
 .container-search {
-  width: 700px;
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 #search-box {
   position: relative;
-  margin-bottom: 0.5rem
+  margin-bottom: 0.5rem;
 }
 
 #search-box::before {
@@ -103,10 +72,10 @@
   border: 1px solid #dedede;
   border-radius: 1rem;
   padding: 1rem 1rem 1rem 2rem;
-  width: 250px;
+  width: 100%;
   line-height: 1rem;
   height: 1rem;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .search-hit em {
