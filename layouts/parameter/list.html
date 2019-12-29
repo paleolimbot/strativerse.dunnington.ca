@@ -18,8 +18,11 @@
     
     <h2>Publications</h2>
     {{ $publications := partial "fun/records_publications" $records }}
-    {{ partial "publication_list" $publications }}
-    
+    {{ if $publications }}
+      {{ partial "publication_list" $publications }}
+    {{ else }}
+      {{ partial "empty_list" "publications" }}
+    {{ end }}
   </article>
 
 </main>
