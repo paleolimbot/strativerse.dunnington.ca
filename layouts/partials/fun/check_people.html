@@ -1,0 +1,6 @@
+{{- range . -}}
+  {{- $page := site.GetPage (printf "/%s/%s" "person" (. | urlize)) -}}
+  {{- if not $page -}}
+    {{- errorf "There is no person named '%s'" . -}}
+  {{- end -}}
+{{- end -}}

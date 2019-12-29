@@ -1,0 +1,6 @@
+{{- range . -}}
+  {{- $page := site.GetPage (printf "/%s/%s" "publication" (. | urlize)) -}}
+  {{- if not $page -}}
+    {{- errorf "There is no publication named '%s'" . -}}
+  {{- end -}}
+{{- end -}}

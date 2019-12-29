@@ -1,0 +1,15 @@
+
+{{- if not .Params.date_collected_earliest -}}
+  &lt;={{- .Date.Format "Dec 2006"}}
+{{- else -}}
+  {{- $early_date := time .Params.date_collected_earliest -}}
+  {{- if and (eq $early_date.Day .Date.Day) (eq $early_date.Month .Date.Month) (eq $early_date.Year .Date.Year) -}}
+    {{- .Date.Format "1 Dec 2006" -}}
+  {{- else if and (eq $early_date.Month .Date.Month) (eq $early_date.Year .Date.Year) -}}
+    {{- .Date.Format "Dec 2006" -}}
+  {{- else if eq $early_date.Year .Date.Year -}}
+    {{- .Date.Format "2006" -}}
+  {{- else -}}
+    {{- $early_date.Format "Dec 2006"}}-{{ .Date.Format "Dec 2006" -}}
+  {{- end -}}
+{{- end -}}

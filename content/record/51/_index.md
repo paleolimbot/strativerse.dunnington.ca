@@ -5,7 +5,7 @@ date_collected_latest: '1995-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment
-feature: .na.character
+feature: '909'
 description: Exact location unclear from publication. At 47d12m latitude.
 parameters:
   - Pb/210

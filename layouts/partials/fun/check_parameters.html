@@ -1,0 +1,6 @@
+{{- range . -}}
+  {{- $page := site.GetPage (printf "/%s/%s" "parameter" (. | urlize)) -}}
+  {{- if not $page -}}
+    {{- errorf "There is no parameter named '%s'" . -}}
+  {{- end -}}
+{{- end -}}

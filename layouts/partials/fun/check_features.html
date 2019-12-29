@@ -1,0 +1,8 @@
+{{- range . -}}
+  {{- if . -}}
+    {{- $page := site.GetPage (printf "/%s/%s" "feature" (. | urlize)) -}}
+    {{- if not $page -}}
+      {{- errorf "There is no feature named '%s'" . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

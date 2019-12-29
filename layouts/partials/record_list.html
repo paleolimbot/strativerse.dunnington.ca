@@ -2,7 +2,7 @@
 <ul class="records object-list">
 {{ range . }}
   <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title }} ({{- partial "record_collected" . -}})</a>
   </li>
 {{ end }}
 </ul>

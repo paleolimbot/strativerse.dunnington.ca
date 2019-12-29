@@ -7,24 +7,11 @@
     <h1 class="article-title">{{ .Title }}</h1>
     
     <div class="article-tags">
+      {{ partial "fun/check_features" (slice .Params.feature) }}
       {{ $feature := site.GetPage (printf "/%s/%s" "feature" (.Params.feature | urlize)) }}
       Collected from
       <a href="{{ $feature.RelPermalink }}">{{ $feature.Title }}</a>
-      {{ if not .Params.date_collected_earliest }}
-        before <span class="article-date">{{ .Date.Format "December 2006"}}</span>
-      {{ else }}
-        {{ $early_date := time .Params.date_collected_earliest }}
-        {{ if eq $early_date.Month .Date.Month }}
-          in <span class="article-date">{{ .Date.Format "December 2006" }}</span>
-        {{ else if eq $early_date.Year  .Date.Year }}
-          in <span class="article-date">{{ .Date.Format "2006" }}</span>
-        {{ else }}
-          between
-          <span class="article-date">{{ $early_date.Format "December 2006"}}</span>
-          and
-          <span class="article-date">{{ .Date.Format "December 2006"}}</span>
-        {{ end }}
-      {{ end }}
+      <span class="article-date">{{ partial "record_collected" . }}</span>
     </div>
 
     <div class="article-content">
@@ -32,21 +19,17 @@
     </div> 
     
     <h2>Parameters</h2>
-    
-    <div class="parameters parameters-record">
-      {{ range .Params.parameters }}
-        {{ $parameter := site.GetPage (printf "/%s/%s" "parameter" (. | urlize)) }}
-        {{ with $parameter }}
-          <a href="{{ $parameter.RelPermalink }}">{{ $parameter.Title }}</a>
-        {{ else }}
-          {{ errorf "There is no parameter named '%s'" .}}
-          {{ . }}
-        {{ end }}
-      {{ end }}
-    </div>
+    {{ partial "fun/check_parameters" .Params.parameters }}
+    {{ $parameters := partial "fun/records_parameters" (slice .) }}
+    {{ if $parameters }}
+      {{ partial "parameter_list" $parameters }}
+    {{ else }}
+      {{ partial "empty_list" "parameters" }}
+    {{ end }}
     
     <h2>Publications</h2>
-    {{ $publications := partial "fun/records_publications" (slice .)}}
+    {{ partial "fun/check_publications" .Params.publications }}
+    {{ $publications := partial "fun/records_publications" (slice .) }}
     {{ if $publications }}
     
       {{ partial "publication_list" $publications }}
