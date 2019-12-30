@@ -1,23 +1,34 @@
       <footer class="footer">
         <ul class="footer-links">
           <li>
-            <a href="https://fishandwhistle.net" target="_blank">&copy;2020</a>
+            <a href="https://fishandwhistle.net" target="_blank">&copy; dewey dunnington</a>
+          </li>
+          <li>
+            <a href="/about/">about</a>
           </li>
           {{ if findRE "[.]md$" .Path }}
+          {{ $contentUrl := printf "https://github.com/%s/edit/master/content/%s" .Site.Params.gitHubRepo .Path }}
           <li>
-            <a href="https://github.com/{{ .Site.Params.gitHubRepo }}/edit/master/content/{{ .Path }}" target="_blank">edit on GitHub</a>
+            <a href="{{ $contentUrl }}" target="_blank">edit</a>
+          </li>
+          <li>
+            {{ $issueTitle := printf "Issue on page '%s'" ((.Title | default .Params.csl.title) | default "(no title)") }}
+            {{ $issueBody := printf "Link to page: https:%s\nContent URL: %s\n\n(describe problem here)" .Permalink $contentUrl }}
+            <a href="https://github.com/paleolimbot/strativerse-hugo/issues/new?title={{ $issueTitle }}&body={{ $issueBody }}" target="_blank">
+              report an issue
+            </a>
           </li>
           {{ else }}
           <li>
-            <a href="https://github.com/{{ .Site.Params.gitHubRepo }}" target="_blank">edit on GitHub</a>
+            <a href="https://github.com/{{ .Site.Params.gitHubRepo }}" target="_blank">edit</a>
           </li>
-          {{ if .GitInfo }}
           <li>
-            <a href="https://github.com/{{ .Site.Params.gitHubRepo }}/commit/{{ .GitInfo.Hash }}/content/{{ .Path }}">
-              Last updated {{ .GitInfo.AuthorDate }}
+            {{ $issueTitle := printf "Issue on page '%s'" (.Title | default .Params.csl.title) }}
+            {{ $issueBody := printf "Link to page: https:%s\n\n(describe problem here)" .Permalink }}
+            <a href="https://github.com/paleolimbot/strativerse-hugo/issues/new?title={{ $issueTitle }}&body={{ $issueBody }}" target="_blank">
+              report an issue
             </a>
           </li>
-          {{ end }}
           {{ end }}
         </ul>
 

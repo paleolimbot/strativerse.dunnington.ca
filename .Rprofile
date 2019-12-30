@@ -17,7 +17,7 @@ sv_build <- function() {
   system("hugo --enableGitInfo")
 }
 
-sv_browse <- function(path = sv_editing_url() %||% "", timeout = 30000) {
+sv_browse <- function(path = sv_editing_url() %||% "", timeout = 40000) {
   path <- gsub("/_index\\.md", "", path)
   path <- gsub("(^/)|(/$)", "", path)
   

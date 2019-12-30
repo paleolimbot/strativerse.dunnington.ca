@@ -24,14 +24,19 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 20
 
 [[menu.main]]
+    name = "Parameters"
+    url = "/parameter/"
+    weight = 30
+
+[[menu.main]]
     name = "Publications"
     url = "/publication/"
-    weight = 30
-    
-[[menu.main]]
-    name = "About"
-    url = "/about/"
     weight = 40
+
+[[menu.main]]
+    name = "People"
+    url = "/person/"
+    weight = 50
 
 [params]
     description = "A collection of time-stratigraphic records."

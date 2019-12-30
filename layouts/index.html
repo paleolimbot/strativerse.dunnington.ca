@@ -3,18 +3,29 @@
 <main class="content" role="main">
 
   <article class="article">
-    <h1 class="article-title">{{ .Title }}</h1>
-    <div class="article-content">
-      
+    {{ if .Title }}
+      <h1 class="article-title">{{ .Title }}</h1>
+    {{ end }}
+    
+    {{ if .Content }}
+    <div class="article-content article-content-centred">
+      {{ .Content }}
+    </div>
+    {{ end }}
+    
+    <div class="article-content article-content-centred">
+
       Search
       {{ len (where .Site.Pages "Type" "record") }}
       records,
       {{ len (where .Site.Pages "Type" "feature") }}
       features,
+      {{ len (where .Site.Pages "Type" "parameter") }}
+      parameters,
       {{ len (where .Site.Pages "Type" "publication") }}
       publications, and
-      {{ len (where .Site.Pages "Type" "parameter") }}
-      parameters.
+      {{ len (where .Site.Pages "Type" "person") }}
+      people.
       
     </div>
   </article>
@@ -23,15 +34,20 @@
   
   {{ partial "map" . }}
   
+  {{ $posts := where .Site.RegularPages ".Type" "post" }}
+  
   <h2>News</h2>
   
   <div class="archive">
-    {{ range .Site.RegularPages }}
+    {{ range $posts }}
     <article class="archive-item">
       <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
       <span class="archive-item-date">
         {{ .Date.Format "2006-01-02" }}
       </span>
+      <div class="archive-summary">
+        {{ .Summary }}
+      </div>
     </article>
     {{ end }}
   </div>

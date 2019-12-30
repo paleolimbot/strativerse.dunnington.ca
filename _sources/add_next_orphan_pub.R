@@ -7,8 +7,11 @@ pubs_with_records <- do.call(c, recs$publications) %>%
 
 pubs_skip <- c("brugam_carlson81", "johansson85")
 
-pubs %>% 
-  filter(!(slug %in% c(pubs_with_records, pubs_skip))) %>% 
+orphan_pubs <- pubs %>% 
+  filter(!(slug %in% c(pubs_with_records, pubs_skip)))
+
+
+orphan_pubs %>% 
   arrange(date) %>% 
   slice(1) %>% 
   pull(slug) %>% 

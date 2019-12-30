@@ -13,6 +13,10 @@
   background: inherit;
 }
 
+.article-content-centred {
+  text-align: center;
+}
+
 /* Object lists */
 
 .object-list-rows {
