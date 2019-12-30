@@ -1,6 +1,7 @@
 ---
 title: Features
 layout: index
+include_map: true
 outputs:
   - html
   - json

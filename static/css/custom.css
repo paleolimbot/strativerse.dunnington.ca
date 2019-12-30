@@ -88,3 +88,9 @@
 .search-hit {
   padding-bottom: 10px;
 }
+
+/* Map */
+
+#strat-map-main {
+  height: 400px;
+}

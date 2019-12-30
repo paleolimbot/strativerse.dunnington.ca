@@ -1,27 +1,31 @@
 {{- /* Generate page description. */ -}}
-    {{- $desc := "" -}}
-    {{- if .Params.description -}}
-      {{- $desc = .Params.description -}}
-    {{- else if .Params.csl.abstract -}}
-      {{- $desc = .Params.csl.abstract -}}
-    {{- else -}}
-      {{- $desc = .Summary -}}
-    {{- end -}}
+{{- $desc := "" -}}
+{{- if .Params.description -}}
+  {{- $desc = .Params.description -}}
+{{- else if .Params.csl.abstract -}}
+  {{- $desc = .Params.csl.abstract -}}
+{{- else -}}
+  {{- $desc = .Summary -}}
+{{- end -}}
 
-    {{- $blurb := "" -}}
-    {{- if and (eq .Section "publication") .Params.csl.DOI }}
-      {{- $blurb = printf "%s (%d). %s. doi:%s" (partial "publication_etal" .) .Date.Year .Params.csl.Title .Params.csl.DOI -}}
-    {{- else if eq .Section "publication" -}}
-      {{- $blurb = printf "%s (%d). %s." (partial "publication_etal" .) .Date.Year .Params.csl.Title -}}
-    {{- else if eq .Section "record" -}}
-      {{- $feature := site.GetPage (printf "/%s/%s" "feature" (.Params.feature | urlize)) -}}
-      {{- $blurb = printf "Collected from %s (%s)" $feature.Title (partial "record_collected" .) -}}
-    {{- else -}}
-      {{- $blurb = $desc -}}
-    {{- end -}}
+{{- $blurb := "" -}}
+{{- if and (eq .Section "publication") .Params.csl.DOI }}
+  {{- $blurb = printf "%s (%d). %s. doi:%s" (partial "publication_etal" .) .Date.Year .Params.csl.Title .Params.csl.DOI -}}
+{{- else if eq .Section "publication" -}}
+  {{- $blurb = printf "%s (%d). %s." (partial "publication_etal" .) .Date.Year .Params.csl.Title -}}
+{{- else if eq .Section "record" -}}
+  {{- $feature := site.GetPage (printf "/%s/%s" "feature" (.Params.feature | urlize)) -}}
+  {{- $blurb = printf "Collected from %s (%s)" $feature.Title (partial "record_collected" .) -}}
+{{- else -}}
+  {{- $blurb = $desc -}}
+{{- end -}}
 
-    {{- $title := .Title | default .Params.csl.title }}
-    {{- $rel_permalink := .RelPermalink -}}
+{{- $title := .Title | default .Params.csl.title }}
+{{- $rel_permalink := .RelPermalink -}}
+{{- $geometry := dict -}}
+{{- if .Params.bbox -}}
+  {{- $geometry = dict "minLat" .Params.bbox.ymin "maxLat" .Params.bbox.ymax "minLon" .Params.bbox.xmin "maxLon" .Params.bbox.xmax "longitude" .Params.longitude "latitude" .Params.latitude -}}
+{{- end -}}
 
-    {{- /* Make dictionary of search index */ -}}
-    {{- return (dict "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "type" .Type "blurb" $blurb) -}}
+{{- /* Make dictionary of search index */ -}}
+{{- return (dict "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "type" .Type "blurb" $blurb "geometry" $geometry) -}}

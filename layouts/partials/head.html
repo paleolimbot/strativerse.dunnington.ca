@@ -26,10 +26,9 @@
 <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
 {{ end }}
 
-{{ with .OutputFormats.Get "RSS" }}
-<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-{{ end }}
-{{ partial "head_highlightjs" . }}
+<script type="text/javascript" src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<link href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" type="text/css" media="all" rel="stylesheet">
+
 <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" media="all">
 <link rel="stylesheet" href="{{ "css/main.css" | relURL }}" media="all">
 {{ range .Site.Params.customCSS }}

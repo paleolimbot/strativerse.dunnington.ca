@@ -9,8 +9,14 @@
       {{ .Content }}
     </div>
     
-    {{ partial "search" . }}
-    
   </article>
+  
+  {{ partial "search" . }}
+  
+  {{ if .Params.include_map }}
+  
+  {{ partial "map" . }}
+  
+  {{ end }}
 
 </main>
