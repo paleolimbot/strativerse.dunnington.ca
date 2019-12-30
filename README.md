@@ -7,6 +7,8 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Netlify
+Status](https://api.netlify.com/api/v1/badges/935b4c0a-7180-4ad2-ac2a-baf3a8e90cf8/deploy-status)](https://app.netlify.com/sites/gallant-johnson-62b457/deploys)
 <!-- badges: end -->
 
 This is the source of the [Strativerse](http://strativerse.org), as a
