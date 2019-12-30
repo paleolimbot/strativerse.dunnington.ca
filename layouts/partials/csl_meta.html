@@ -1,0 +1,58 @@
+
+{{ if .Params.csl }}
+
+  <meta name="citation_title" content="{{ .Params.csl.Title  }}"/>
+  <meta name="citation_publication_date" content="{{ .Date.Format "2006-01-02" }}"/>
+  <meta name="citation_date" content="{{ .Date.Format "2006-01-02" }}"/>
+  
+  {{ if .Params.csl.abstract }}
+    <meta name="citation_abstract" content="{{ .Params.csl.abstract }}" />
+  {{ end }}
+  
+  {{ range .Params.csl.author }}
+    <meta name="citation_author" content="{{ .given }} {{.family}}"/>
+  {{ end }}
+  
+  {{ range .Params.csl.editor }}
+    <!-- actually an editor, but no way to distinguish in citation_ meta -->
+    <meta name="citation_author" content="{{ .given }} {{.family}}"/>
+  {{ end }}
+
+  {{ if .Params.csl.DOI }}
+    <meta name="citation_public_url" content="{{ printf "https://doi.org/%s" .Params.csl.DOI }}"/>
+    <meta name="dc.identifier" content="doi:{{ .Params.csl.DOI }}"/>
+    <meta name="DOI" content="{{ .Params.csl.DOI }}"/>
+    <meta name="citation_doi" content="{{ .Params.csl.DOI }}"/>
+  {{ else if .Params.csl.URL }}
+    <meta name="citation_public_url" content="{{ .Params.csl.URL }}"/>
+  {{ end }}
+  
+  {{ if eq .Params.csl.type "article-journal" }}
+    <meta name="citation_journal_title" content="{{ index (.Params.csl) "container-title" }}"/>
+    <meta name="citation_volume" content="{{ .Params.csl.volume }}"/>
+    {{ if .Params.csl.issue }}
+      <meta name="citation_issue" content="{{ .Params.csl.issue }}"/>
+    {{ end }}
+    
+  {{ else if eq .Params.csl.type "chapter" }}
+    <meta name="citation_publisher" content="{{ .Params.csl.publisher }}, {{ index .Params.csl "publisher-place" }}"/>
+    <meta name="citation_book_title" content="{{ index (.Params.csl) "container-title" }}"/>
+    
+  {{ else if eq .Params.csl.type "paper-conference" }} 
+    <meta name="citation_publisher" content="{{ .Params.csl.publisher }}, {{ index .Params.csl "publisher-place" }}"/>
+    <meta name="citation_conference" content="{{ index (.Params.csl) "container-title" }}"/>
+    
+  {{ else if eq .Params.csl.type "thesis" }} 
+    <meta name="citation_dissertation_institution" content="{{ .Params.csl.publisher }}, {{ index .Params.csl "publisher-place" }}"/>
+    
+  {{ else if eq .Params.csl.type "report" }} 
+    <meta name="citation_technical_report_institution" content="{{ .Params.csl.publisher }}, {{ index .Params.csl "publisher-place" }}"/>
+    <meta name="citation_publisher" content="{{ .Params.csl.publisher }}, {{ index .Params.csl "publisher-place" }}"/>
+  {{ end }}
+  
+  {{ if findRE "^.*?-.*$" .Params.csl.page }}
+    <meta name="citation_firstpage" content="{{ replaceRE "-.*$" "" .Params.csl.page }}"/>
+    <meta name="citation_lastpage" content="{{ replaceRE "^.*?-" "" .Params.csl.page }}"/>
+  {{ end }}
+
+{{ end }}

@@ -61,6 +61,10 @@
       {{ partial "empty_list" "records" }}
     {{ end }}
     
+    <h2>Metadata</h2>
+    
+    <p>Download <a href="data:application/json;base64,{{ base64Encode (.Params.csl | jsonify) }}" target="_blank" download="{{ $slug }}.json">CSL JSON</a></p>
+    
   </article>
 
 </main>
