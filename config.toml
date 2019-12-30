@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://strativerse.org/"
 languageCode = "en-us"
 title = "Strativerse"
 theme = "hugo-lithium"
