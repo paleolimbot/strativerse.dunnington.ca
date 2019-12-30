@@ -28,4 +28,4 @@
 {{- end -}}
 
 {{- /* Make dictionary of search index */ -}}
-{{- return (dict "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "type" .Type "blurb" $blurb "geometry" $geometry) -}}
+{{- return (dict "relpermalink" $rel_permalink "title" $title "summary" (plainify $desc) "type" .Type "blurb" $blurb "geometry" $geometry "kind" .Kind) -}}

@@ -1,0 +1,16 @@
+{{- $slug := replace (replace .Path "/_index.md" "") "person/" "" }}
+{{- $publications := where (where .Site.Pages "Type" "publication") "Params.people" "intersect" (slice $slug) -}}
+{{- $publication_slugs := partial "fun/publications_slugs" $publications -}}
+{{- $records := where (where .Site.Pages "Type" "record") "Params.publications" "intersect" $publication_slugs -}}
+{{- $index := slice -}}
+{{- $features := slice -}}
+{{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+{{- range $records -}}
+  {{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+  {{- $feature := site.GetPage (printf "/%s/%s" "feature" (.Params.feature | urlize)) -}}
+  {{- $features = union $features (slice $feature) -}}
+{{- end -}}
+{{- range $features -}}
+  {{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+{{- end -}}
+{{- jsonify $index -}}

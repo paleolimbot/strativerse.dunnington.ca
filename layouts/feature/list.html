@@ -42,6 +42,13 @@
       {{ partial "empty_list" "records" }}
     {{ end }}
     
+    {{ if .Params.geometry }}
+      {{ partial "map" .}}
+      <script type="text/javascript">
+        strat_map_options = {types: ["feature", "record"]};
+      </script>
+    {{ end }}
+  
   </article>
 
 </main>

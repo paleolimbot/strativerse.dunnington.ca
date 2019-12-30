@@ -27,6 +27,8 @@
       
         {{ partial "records_by_feature" $records }}
         
+        {{ partial "map" . }}
+        
       {{ else }}
         {{ partial "empty_list" "records" }}
       {{ end }}

@@ -1,0 +1,14 @@
+{{- $slug := replaceRE "/$" "" (replace (replace .Path "_index.md" "") "parameter/" "") -}}
+{{- $records := where (where .Site.Pages "Type" "record") "Params.parameters" "intersect" (slice $slug) -}}
+{{- $index := slice -}}
+{{- $features := slice -}}
+{{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+{{- range $records -}}
+  {{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+  {{- $feature := site.GetPage (printf "/%s/%s" "feature" (.Params.feature | urlize)) -}}
+  {{- $features = union $features (slice $feature) -}}
+{{- end -}}
+{{- range $features -}}
+  {{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+{{- end -}}
+{{- jsonify $index -}}

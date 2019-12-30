@@ -20,23 +20,29 @@ $(function() {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  if(opts.initialExtent) {
-    var latLonBounds = new L.LatLngBounds(
-      [opts.initialExtent.minLat, opts.initialExtent.minLon],
-      [opts.initialExtent.maxLat, opts.initialExtent.maxLon]
-    );
-    map.fitBounds(latLonBounds);
-  }
-
   $.getJSON(search_config.indexURI, function (search_index) {
+    var bounds = null;
     for (var i=0; i<search_index.length; i++) {
       var item = search_index[i];
       if ((opts.types.includes(item.type)) && item.geometry.latitude) {
+        var itemBounds = new L.LatLngBounds(
+          [item.geometry.minLat, item.geometry.minLon],
+          [item.geometry.maxLat, item.geometry.maxLon]
+        );
+        
+        if (bounds === null) {
+          bounds = itemBounds;
+        } else {
+          bounds.extend(itemBounds);
+        }
+        
         var marker = L.marker([item.geometry.latitude, item.geometry.longitude]).addTo(map);
         marker.bindPopup(
           '<div class="map-popup"><h4><a href="' + item.relpermalink + '" target="_blank">' + item.title + '</a></h4><p>[' + item.type + '] ' + item.blurb + '</p></div>'
         );
       }
     }
+    
+    map.fitBounds(bounds);
   });
 });

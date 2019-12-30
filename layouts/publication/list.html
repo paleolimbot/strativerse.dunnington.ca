@@ -52,6 +52,11 @@
       {{ $parameters := partial "fun/records_parameters" $records }}
       {{ partial "parameter_list" $parameters}}
       
+      {{ partial "map" . }}
+      <script type="text/javascript">
+        strat_map_options = {types: ["feature", "record"]};
+      </script>
+      
     {{ else }}
       {{ partial "empty_list" "records" }}
     {{ end }}

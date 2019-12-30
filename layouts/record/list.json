@@ -1,0 +1,5 @@
+{{- $index := slice }}
+{{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+{{- $feature := site.GetPage (printf "/%s/%s" "feature" (.Params.feature | urlize)) -}}
+{{- $index = append $index (slice (partial "fun/search_index.json" $feature)) -}}
+{{- jsonify $index -}}

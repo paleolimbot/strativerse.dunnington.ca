@@ -1,0 +1,8 @@
+{{- $slug := replace (replace .Path "/_index.md" "") "feature/" "" -}}
+{{- $records := where (where .Site.Pages "Type" "record") "Params.feature" $slug -}}
+{{- $index := slice }}
+{{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+{{- range $records -}}
+  {{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
+{{- end -}}
+{{- jsonify $index -}}

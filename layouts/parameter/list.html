@@ -23,6 +23,13 @@
     {{ else }}
       {{ partial "empty_list" "publications" }}
     {{ end }}
+    
+    {{ if $records }}
+      {{ partial "map" . }}
+      <script type="text/javascript">
+        strat_map_options = {types: ["feature", "record"]};
+      </script>
+    {{ end }}
   </article>
 
 </main>
