@@ -13,7 +13,7 @@
           </li>
           <li>
             {{ $issueTitle := printf "Issue on page '%s'" ((.Title | default .Params.csl.title) | default "(no title)") }}
-            {{ $issueBody := printf "Link to page: https:%s\nContent URL: %s\n\n(describe problem here)" .Permalink $contentUrl }}
+            {{ $issueBody := printf "Link to page: %s\nContent URL: %s\n\n(describe problem here)" .Permalink $contentUrl }}
             <a href="https://github.com/paleolimbot/strativerse-hugo/issues/new?title={{ $issueTitle }}&body={{ $issueBody }}" target="_blank">
               report an issue
             </a>
@@ -24,7 +24,7 @@
           </li>
           <li>
             {{ $issueTitle := printf "Issue on page '%s'" (.Title | default .Params.csl.title) }}
-            {{ $issueBody := printf "Link to page: https:%s\n\n(describe problem here)" .Permalink }}
+            {{ $issueBody := printf "Link to page: %s\n\n(describe problem here)" .Permalink }}
             <a href="https://github.com/paleolimbot/strativerse-hugo/issues/new?title={{ $issueTitle }}&body={{ $issueBody }}" target="_blank">
               report an issue
             </a>
