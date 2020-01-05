@@ -1,23 +1,17 @@
 ---
-title: Jerry Lake-B
-date: '1982-12-31'
-date_collected_latest: '1982-12-31'
+title: Lake Harriett
+date: ''
+date_collected_latest: ''
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment
-feature: '482'
+feature: '961'
 description: ''
 parameters:
-  - Pb/extractable
-  - Zn/extractable
-  - Cd/extractable
+  - Pb/total
   - Pb/210
 publications:
-  - dillon_evans82
-  - evans_etal83
   - norton_etal90
-  - blais95
-  - evans_etal86
   - norton_kahl91
 geo_error: 0.0
 geometry: ''

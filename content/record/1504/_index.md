@@ -28,6 +28,7 @@ parameters:
 publications:
   - norton_kahl87
   - norton_etal90
+  - norton_kahl91
 geo_error: 0.0
 geometry: ''
 bbox: ~
