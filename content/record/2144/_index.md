@@ -1,7 +1,7 @@
 ---
 title: Kippure Bog
-date: ''
-date_collected_latest: ''
+date: '1993-09-01'
+date_collected_latest: '1993-09-01'
 date_collected_earliest: ''
 record_type: core
 medium: peat

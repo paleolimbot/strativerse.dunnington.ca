@@ -1,7 +1,7 @@
 ---
 title: PF-03
-date: ''
-date_collected_latest: ''
+date: '1991-01-01'
+date_collected_latest: '1991-01-01'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

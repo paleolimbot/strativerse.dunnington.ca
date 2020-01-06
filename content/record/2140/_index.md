@@ -1,7 +1,7 @@
 ---
 title: Lake Harriett
-date: ''
-date_collected_latest: ''
+date: '1990-01-01'
+date_collected_latest: '1990-01-01'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

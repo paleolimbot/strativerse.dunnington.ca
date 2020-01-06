@@ -1,7 +1,7 @@
 ---
 title: Five Island Lake
-date: ''
-date_collected_latest: ''
+date: '1988-01-01'
+date_collected_latest: '1988-01-01'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment
