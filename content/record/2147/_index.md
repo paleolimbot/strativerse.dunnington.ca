@@ -1,8 +1,8 @@
 ---
 title: West Basin
-date: ''
-date_collected_latest: ''
-date_collected_earliest: ''
+date: '1986-12-31'
+date_collected_latest: '1986-12-31'
+date_collected_earliest: '1986-01-01'
 record_type: core
 medium: lake_sediment
 feature: '498'
