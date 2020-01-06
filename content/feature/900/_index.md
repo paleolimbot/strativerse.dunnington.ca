@@ -24,5 +24,5 @@ bbox:
   ymax: 65.7949558
 longitude: 20.0926405
 latitude: 59.0276572
-OSM: ''
+external_links: {}
 ---

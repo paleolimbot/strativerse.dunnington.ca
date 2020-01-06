@@ -19,5 +19,6 @@ bbox:
   ymax: 46.7035338
 longitude: -85.0390105
 latitude: 46.7015758
-OSM: https://www.openstreetmap.org/way/143508867
+external_links:
+  osm: way/143508867
 ---
