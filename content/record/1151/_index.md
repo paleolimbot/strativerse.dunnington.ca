@@ -1,7 +1,6 @@
 ---
 title: CMO.1
 date: '2001-03-08'
-date_collected_latest: '2001-03-08'
 date_collected_earliest: '2001-03-08'
 record_type: core
 medium: lake_sediment

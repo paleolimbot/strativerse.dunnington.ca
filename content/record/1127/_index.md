@@ -1,7 +1,6 @@
 ---
 title: WST.2
 date: '1998-11-12'
-date_collected_latest: '1998-11-12'
 date_collected_earliest: '1998-11-12'
 record_type: core
 medium: lake_sediment

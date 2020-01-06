@@ -1,7 +1,6 @@
 ---
 title: Long Pond
 date: '1992-02-29'
-date_collected_latest: '1992-02-29'
 date_collected_earliest: '1992-02-01'
 record_type: core
 medium: lake_sediment

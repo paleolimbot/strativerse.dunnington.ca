@@ -1,7 +1,6 @@
 ---
 title: Lake Hertel
 date: '1996-07-31'
-date_collected_latest: '1996-07-31'
 date_collected_earliest: '1996-07-01'
 record_type: core
 medium: lake_sediment

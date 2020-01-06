@@ -1,7 +1,6 @@
 ---
 title: MYR2
 date: '2000-05-31'
-date_collected_latest: '2000-05-31'
 date_collected_earliest: '2000-05-01'
 record_type: core
 medium: peat

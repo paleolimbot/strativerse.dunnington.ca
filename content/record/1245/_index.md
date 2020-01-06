@@ -1,7 +1,6 @@
 ---
 title: MYS.B2
 date: '2000-08-31'
-date_collected_latest: '2000-08-31'
 date_collected_earliest: '2000-08-31'
 record_type: core
 medium: lake_sediment

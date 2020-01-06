@@ -1,7 +1,6 @@
 ---
 title: SL13-1
 date: '2013-07-04'
-date_collected_latest: '2013-07-04'
 date_collected_earliest: '2013-07-04'
 record_type: core
 medium: lake_sediment

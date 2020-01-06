@@ -1,7 +1,6 @@
 ---
 title: Lac Waterloo
 date: '1975-03-11'
-date_collected_latest: '1975-03-11'
 date_collected_earliest: '1975-03-11'
 record_type: core
 medium: lake_sediment

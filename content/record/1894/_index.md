@@ -1,7 +1,6 @@
 ---
 title: RM03CM-2
 date: '2003-06-30'
-date_collected_latest: '2003-06-30'
 date_collected_earliest: '2003-06-01'
 record_type: core
 medium: peat

@@ -1,7 +1,6 @@
 ---
 title: LL-GC11
 date: '2010-07-07'
-date_collected_latest: '2010-07-07'
 date_collected_earliest: '2010-07-07'
 record_type: core
 medium: lake_sediment

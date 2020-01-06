@@ -1,7 +1,6 @@
 ---
 title: GDL-10A
 date: '1995-08-10'
-date_collected_latest: '1995-08-10'
 date_collected_earliest: '1995-08-10'
 record_type: core
 medium: peat

@@ -1,7 +1,6 @@
 ---
 title: DH99-A
 date: '1999-12-31'
-date_collected_latest: '1999-12-31'
 date_collected_earliest: '1999-01-01'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: Hannah Lake-Multiple Depths
 date: '1979-12-31'
-date_collected_latest: '1979-12-31'
 date_collected_earliest: '1979-01-01'
 record_type: core
 medium: lake_sediment

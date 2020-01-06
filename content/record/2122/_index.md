@@ -1,7 +1,6 @@
 ---
 title: Galapagos (San Cristobal Island)
 date: '1982-12-31'
-date_collected_latest: '1982-12-31'
 date_collected_earliest: ''
 record_type: section
 medium: coral

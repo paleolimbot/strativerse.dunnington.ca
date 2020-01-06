@@ -1,7 +1,6 @@
 ---
 title: Black Joe C. 1
 date: '1984-08-31'
-date_collected_latest: '1984-08-31'
 date_collected_earliest: '1984-08-01'
 record_type: core
 medium: lake_sediment

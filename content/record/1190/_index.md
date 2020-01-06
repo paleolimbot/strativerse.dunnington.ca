@@ -1,7 +1,6 @@
 ---
 title: LKH.1
 date: '2001-07-19'
-date_collected_latest: '2001-07-19'
 date_collected_earliest: '2001-07-19'
 record_type: core
 medium: lake_sediment

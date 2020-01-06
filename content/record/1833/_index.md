@@ -1,7 +1,6 @@
 ---
 title: MAU-11A
 date: '1998-10-30'
-date_collected_latest: '1998-10-30'
 date_collected_earliest: '1998-10-30'
 record_type: core
 medium: peat

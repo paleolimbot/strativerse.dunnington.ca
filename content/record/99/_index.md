@@ -1,7 +1,6 @@
 ---
 title: Hazen-BCB (Core "A")
 date: '1990-12-31'
-date_collected_latest: '1990-12-31'
 date_collected_earliest: '1990-01-01'
 record_type: core
 medium: lake_sediment

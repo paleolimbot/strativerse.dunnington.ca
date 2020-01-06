@@ -1,7 +1,6 @@
 ---
 title: DSS-W20k
 date: '1977-12-31'
-date_collected_latest: '1977-12-31'
 date_collected_earliest: '1977-12-01'
 record_type: core
 medium: glacier_ice

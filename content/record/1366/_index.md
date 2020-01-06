@@ -1,7 +1,6 @@
 ---
 title: Speck Pond
 date: '1978-08-11'
-date_collected_latest: '1978-08-11'
 date_collected_earliest: '1978-08-11'
 record_type: core
 medium: lake_sediment

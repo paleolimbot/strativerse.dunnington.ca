@@ -1,7 +1,6 @@
 ---
 title: Tasiusaq Bog
 date: '1999-09-30'
-date_collected_latest: '1999-09-30'
 date_collected_earliest: '1999-09-01'
 record_type: core
 medium: peat

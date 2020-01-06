@@ -1,7 +1,6 @@
 ---
 title: Wonder Lake
 date: '1991-04-30'
-date_collected_latest: '1991-04-30'
 date_collected_earliest: '1991-04-01'
 record_type: core
 medium: lake_sediment

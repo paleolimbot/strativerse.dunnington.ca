@@ -1,7 +1,6 @@
 ---
 title: Pallette Lake
 date: '2012-12-31'
-date_collected_latest: '2012-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

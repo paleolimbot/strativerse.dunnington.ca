@@ -1,7 +1,6 @@
 ---
 title: DLN.B
 date: '1997-08-20'
-date_collected_latest: '1997-08-20'
 date_collected_earliest: '1997-08-20'
 record_type: core
 medium: lake_sediment

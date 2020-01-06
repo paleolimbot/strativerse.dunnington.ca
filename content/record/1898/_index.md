@@ -1,7 +1,6 @@
 ---
 title: CM04M
 date: '2004-05-31'
-date_collected_latest: '2004-05-31'
 date_collected_earliest: '2004-05-01'
 record_type: core
 medium: peat

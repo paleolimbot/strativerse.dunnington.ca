@@ -1,7 +1,6 @@
 ---
 title: FM04-1-M
 date: '2004-10-31'
-date_collected_latest: '2004-10-31'
 date_collected_earliest: '2004-10-01'
 record_type: core
 medium: peat

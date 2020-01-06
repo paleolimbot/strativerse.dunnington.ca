@@ -1,7 +1,6 @@
 ---
 title: Pusiano
 date: '1978-12-31'
-date_collected_latest: '1978-12-31'
 date_collected_earliest: '1978-01-01'
 record_type: core
 medium: lake_sediment

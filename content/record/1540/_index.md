@@ -1,7 +1,6 @@
 ---
 title: LL-1J
 date: '1985-12-09'
-date_collected_latest: '1985-12-09'
 date_collected_earliest: '1985-12-09'
 record_type: core
 medium: lake_sediment

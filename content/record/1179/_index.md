@@ -1,7 +1,6 @@
 ---
 title: PLM.W2
 date: '1997-07-30'
-date_collected_latest: '1997-07-30'
 date_collected_earliest: '1997-07-30'
 record_type: core
 medium: lake_sediment

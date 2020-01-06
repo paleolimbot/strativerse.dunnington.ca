@@ -1,7 +1,6 @@
 ---
 title: HIL.1
 date: '1998-06-04'
-date_collected_latest: '1998-06-04'
 date_collected_earliest: '1998-06-04'
 record_type: core
 medium: lake_sediment

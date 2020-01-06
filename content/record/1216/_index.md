@@ -1,7 +1,6 @@
 ---
 title: ORL
 date: '1999-03-17'
-date_collected_latest: '1999-03-17'
 date_collected_earliest: '1999-03-17'
 record_type: core
 medium: lake_sediment

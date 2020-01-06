@@ -1,7 +1,6 @@
 ---
 title: Sundance
 date: '2002-06-30'
-date_collected_latest: '2002-06-30'
 date_collected_earliest: '2002-06-01'
 record_type: core
 medium: lake_sediment

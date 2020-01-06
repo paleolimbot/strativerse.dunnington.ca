@@ -1,7 +1,6 @@
 ---
 title: MAP.1
 date: '2000-07-27'
-date_collected_latest: '2000-07-27'
 date_collected_earliest: '2000-07-27'
 record_type: core
 medium: lake_sediment

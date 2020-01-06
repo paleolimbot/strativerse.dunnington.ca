@@ -1,7 +1,6 @@
 ---
 title: Eniwetak
 date: '1973-12-31'
-date_collected_latest: '1973-12-31'
 date_collected_earliest: ''
 record_type: section
 medium: coral

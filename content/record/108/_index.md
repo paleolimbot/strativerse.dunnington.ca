@@ -1,7 +1,6 @@
 ---
 title: Giauque Lake
 date: '1995-03-31'
-date_collected_latest: '1995-03-31'
 date_collected_earliest: '1995-03-01'
 record_type: core
 medium: lake_sediment

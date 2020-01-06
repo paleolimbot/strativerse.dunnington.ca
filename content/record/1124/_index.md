@@ -1,7 +1,6 @@
 ---
 title: BAL.B
 date: '1998-06-08'
-date_collected_latest: '1998-06-08'
 date_collected_earliest: '1998-06-08'
 record_type: core
 medium: lake_sediment

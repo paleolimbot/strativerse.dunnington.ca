@@ -1,7 +1,6 @@
 ---
 title: SEM.3.0(3)
 date: '1994-05-11'
-date_collected_latest: '1994-05-11'
 date_collected_earliest: '1994-05-11'
 record_type: core
 medium: lake_sediment

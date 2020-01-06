@@ -1,7 +1,6 @@
 ---
 title: Lake Lehmilampi
 date: '2004-04-30'
-date_collected_latest: '2004-04-30'
 date_collected_earliest: '2004-04-01'
 record_type: core
 medium: lake_sediment

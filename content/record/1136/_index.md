@@ -1,7 +1,6 @@
 ---
 title: MEAD-1
 date: '1998-05-14'
-date_collected_latest: '1998-05-14'
 date_collected_earliest: '1998-05-14'
 record_type: core
 medium: lake_sediment

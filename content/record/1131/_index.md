@@ -1,7 +1,6 @@
 ---
 title: SWT.4
 date: '1998-09-24'
-date_collected_latest: '1998-09-24'
 date_collected_earliest: '1998-09-24'
 record_type: core
 medium: lake_sediment

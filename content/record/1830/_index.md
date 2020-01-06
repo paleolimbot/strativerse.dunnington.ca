@@ -1,7 +1,6 @@
 ---
 title: EGR-2F
 date: '1991-08-26'
-date_collected_latest: '1991-08-26'
 date_collected_earliest: '1991-08-26'
 record_type: core
 medium: peat

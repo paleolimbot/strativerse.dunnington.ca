@@ -1,7 +1,6 @@
 ---
 title: Lake Michigan-Multiple Records
 date: '1971-12-31'
-date_collected_latest: '1971-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

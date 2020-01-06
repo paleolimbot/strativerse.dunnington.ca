@@ -1,7 +1,6 @@
 ---
 title: FAR.3
 date: '1998-04-07'
-date_collected_latest: '1998-04-07'
 date_collected_earliest: '1998-04-07'
 record_type: core
 medium: lake_sediment

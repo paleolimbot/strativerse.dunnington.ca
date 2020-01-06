@@ -1,7 +1,6 @@
 ---
 title: Far Lake-a (BCA)
 date: '1988-12-31'
-date_collected_latest: '1988-12-31'
 date_collected_earliest: '1988-01-01'
 record_type: core
 medium: lake_sediment

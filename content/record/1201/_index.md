@@ -1,7 +1,6 @@
 ---
 title: WP.55(1)
 date: '1994-05-07'
-date_collected_latest: '1994-05-07'
 date_collected_earliest: '1994-05-07'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: TM04M-1
 date: '2004-08-31'
-date_collected_latest: '2004-08-31'
 date_collected_earliest: '2004-08-01'
 record_type: core
 medium: peat

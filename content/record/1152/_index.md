@@ -1,7 +1,6 @@
 ---
 title: FOS.4
 date: '2001-03-07'
-date_collected_latest: '2001-03-07'
 date_collected_earliest: '2001-03-07'
 record_type: core
 medium: lake_sediment

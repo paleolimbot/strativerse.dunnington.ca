@@ -1,7 +1,6 @@
 ---
 title: PLME.2
 date: '1999-10-15'
-date_collected_latest: '1999-10-15'
 date_collected_earliest: '1999-10-15'
 record_type: core
 medium: lake_sediment

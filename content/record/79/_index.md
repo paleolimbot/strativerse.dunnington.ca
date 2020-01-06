@@ -1,7 +1,6 @@
 ---
 title: IN-13
 date: '1993-12-31'
-date_collected_latest: '1993-12-31'
 date_collected_earliest: '1993-01-01'
 record_type: core
 medium: lake_sediment

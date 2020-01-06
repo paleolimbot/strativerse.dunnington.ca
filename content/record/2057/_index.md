@@ -1,7 +1,6 @@
 ---
 title: B-KG
 date: '1971-12-31'
-date_collected_latest: '1971-12-31'
 date_collected_earliest: '1971-01-01'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: Lindhultsgöl
 date: '2008-04-30'
-date_collected_latest: '2008-04-30'
 date_collected_earliest: '2008-04-01'
 record_type: core
 medium: lake_sediment

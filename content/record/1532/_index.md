@@ -1,7 +1,6 @@
 ---
 title: LL-6L
 date: '1981-11-19'
-date_collected_latest: '1981-11-19'
 date_collected_earliest: '1981-11-19'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: H
 date: '1993-11-30'
-date_collected_latest: '1993-11-30'
 date_collected_earliest: '1993-11-01'
 record_type: core
 medium: lake_sediment
