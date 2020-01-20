@@ -1,7 +1,6 @@
 ---
 title: Wishart 1
 date: '1981-12-31'
-date_collected_latest: '1981-12-31'
 date_collected_earliest: '1981-01-01'
 record_type: core
 medium: lake_sediment

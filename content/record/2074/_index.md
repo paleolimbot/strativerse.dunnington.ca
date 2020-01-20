@@ -1,7 +1,6 @@
 ---
 title: Station 7
 date: '1978-11-30'
-date_collected_latest: '1978-11-30'
 date_collected_earliest: '1978-10-01'
 record_type: core
 medium: lake_sediment

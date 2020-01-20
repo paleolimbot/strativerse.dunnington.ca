@@ -1,7 +1,6 @@
 ---
 title: Greenland
 date: '1969-12-31'
-date_collected_latest: '1969-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: glacier_ice

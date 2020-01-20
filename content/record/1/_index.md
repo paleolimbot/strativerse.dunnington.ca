@@ -1,7 +1,6 @@
 ---
 title: CORE 18
 date: '1968-12-31'
-date_collected_latest: '1968-12-31'
 date_collected_earliest: '1968-01-01'
 record_type: core
 medium: lake_sediment

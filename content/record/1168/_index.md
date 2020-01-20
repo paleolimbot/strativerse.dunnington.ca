@@ -1,7 +1,6 @@
 ---
 title: HOE.3
 date: '1997-07-09'
-date_collected_latest: '1997-07-09'
 date_collected_earliest: '1997-07-09'
 record_type: core
 medium: lake_sediment

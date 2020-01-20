@@ -1,7 +1,6 @@
 ---
 title: EBT.B1
 date: '1999-09-16'
-date_collected_latest: '1999-09-16'
 date_collected_earliest: '1999-09-16'
 record_type: core
 medium: lake_sediment

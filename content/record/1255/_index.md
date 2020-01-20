@@ -1,7 +1,6 @@
 ---
 title: Big Moose Lake
 date: '1982-12-31'
-date_collected_latest: '1982-12-31'
 date_collected_earliest: '1982-01-01'
 record_type: core
 medium: lake_sediment
@@ -34,6 +33,8 @@ publications:
   - norton_etal90
   - blais95
   - blais_etal95
+  - norton_kahl91
+  - norton_etal91
 geo_error: 0.0
 geometry: ''
 bbox: ~

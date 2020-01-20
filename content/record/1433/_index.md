@@ -1,7 +1,6 @@
 ---
 title: Wingra
 date: '1970-02-28'
-date_collected_latest: '1970-02-28'
 date_collected_earliest: '1970-02-01'
 record_type: core
 medium: lake_sediment

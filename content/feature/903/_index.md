@@ -11,6 +11,6 @@ bbox:
   ymax: -80.0
 longitude: -135.0
 latitude: -80.0
-OSM: ''
-wikipedia: https://en.wikipedia.org/wiki/Rockefeller_Plateau
+external_links:
+  wikipedia: Rockefeller_Plateau
 ---

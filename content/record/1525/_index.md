@@ -1,7 +1,6 @@
 ---
 title: LLRPM1
 date: '1976-08-22'
-date_collected_latest: '1976-08-22'
 date_collected_earliest: '1976-08-22'
 record_type: core
 medium: lake_sediment

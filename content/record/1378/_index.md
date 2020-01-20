@@ -1,7 +1,6 @@
 ---
 title: Lake Huron-Station 3
 date: '1976-12-31'
-date_collected_latest: '1976-12-31'
 date_collected_earliest: '1976-01-01'
 record_type: core
 medium: lake_sediment

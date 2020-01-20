@@ -1,7 +1,6 @@
 ---
 title: LIV(FC)
 date: '1992-08-31'
-date_collected_latest: '1992-08-31'
 date_collected_earliest: '1992-08-01'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: Mountain Pond
 date: '1978-07-24'
-date_collected_latest: '1978-07-24'
 date_collected_earliest: '1978-07-24'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: WRL(1)
 date: '1994-07-06'
-date_collected_latest: '1994-07-06'
 date_collected_earliest: '1994-07-06'
 record_type: core
 medium: lake_sediment

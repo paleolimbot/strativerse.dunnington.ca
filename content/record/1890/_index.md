@@ -1,7 +1,6 @@
 ---
 title: D1999
 date: '1999-05-31'
-date_collected_latest: '1999-05-31'
 date_collected_earliest: '1999-05-01'
 record_type: core
 medium: glacier_ice

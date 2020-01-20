@@ -1,7 +1,6 @@
 ---
 title: LL7c
 date: '2002-12-31'
-date_collected_latest: '2002-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: peat

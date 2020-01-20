@@ -1,7 +1,6 @@
 ---
 title: LL-3L
 date: '1982-03-04'
-date_collected_latest: '1982-03-04'
 date_collected_earliest: '1982-03-04'
 record_type: core
 medium: lake_sediment

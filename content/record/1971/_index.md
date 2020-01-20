@@ -1,7 +1,6 @@
 ---
 title: RL-GC12
 date: '2010-07-08'
-date_collected_latest: '2010-07-08'
 date_collected_earliest: '2010-07-08'
 record_type: core
 medium: lake_sediment

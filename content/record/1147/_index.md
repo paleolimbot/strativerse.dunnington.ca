@@ -1,7 +1,6 @@
 ---
 title: SLN.2
 date: '1997-08-19'
-date_collected_latest: '1997-08-19'
 date_collected_earliest: '1997-08-19'
 record_type: core
 medium: lake_sediment

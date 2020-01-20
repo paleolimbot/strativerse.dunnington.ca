@@ -1,7 +1,6 @@
 ---
 title: BLK(2)
 date: '1994-05-09'
-date_collected_latest: '1994-05-09'
 date_collected_earliest: '1994-05-09'
 record_type: core
 medium: lake_sediment

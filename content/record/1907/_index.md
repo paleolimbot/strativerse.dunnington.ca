@@ -1,7 +1,6 @@
 ---
 title: Brdy Hills
 date: '2003-11-23'
-date_collected_latest: '2003-11-23'
 date_collected_earliest: '2003-11-23'
 record_type: core
 medium: peat

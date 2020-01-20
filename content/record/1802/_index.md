@@ -1,7 +1,6 @@
 ---
 title: Dunnigan Lake
 date: '1992-12-31'
-date_collected_latest: '1992-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

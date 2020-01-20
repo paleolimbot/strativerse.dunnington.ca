@@ -1,7 +1,6 @@
 ---
 title: L14
 date: '1984-02-29'
-date_collected_latest: '1984-02-29'
 date_collected_earliest: '1984-02-01'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: Chon14
 date: '2000-03-31'
-date_collected_latest: '2000-03-31'
 date_collected_earliest: '2000-03-01'
 record_type: core
 medium: lake_sediment

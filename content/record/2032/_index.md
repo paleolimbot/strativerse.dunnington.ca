@@ -1,7 +1,6 @@
 ---
 title: CL3
 date: '2011-02-28'
-date_collected_latest: '2011-02-28'
 date_collected_earliest: '2011-02-01'
 record_type: core
 medium: lake_sediment

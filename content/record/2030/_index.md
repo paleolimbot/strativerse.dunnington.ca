@@ -1,7 +1,6 @@
 ---
 title: Baie Peatland
 date: '2013-12-31'
-date_collected_latest: '2013-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: peat

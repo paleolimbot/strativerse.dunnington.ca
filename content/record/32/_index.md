@@ -1,7 +1,6 @@
 ---
 title: Laukunlampi
 date: '1980-07-31'
-date_collected_latest: '1980-07-31'
 date_collected_earliest: '1980-07-01'
 record_type: core
 medium: lake_sediment

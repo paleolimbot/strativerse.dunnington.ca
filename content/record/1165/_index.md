@@ -1,7 +1,6 @@
 ---
 title: LRC.2
 date: '1996-08-23'
-date_collected_latest: '1996-08-23'
 date_collected_earliest: '1996-08-23'
 record_type: core
 medium: lake_sediment

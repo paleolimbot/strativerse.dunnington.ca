@@ -1,7 +1,6 @@
 ---
 title: CHA.B1
 date: '2000-07-28'
-date_collected_latest: '2000-07-28'
 date_collected_earliest: '2000-07-28'
 record_type: core
 medium: lake_sediment

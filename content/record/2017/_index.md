@@ -1,7 +1,6 @@
 ---
 title: Lake Xiaolongwan
 date: '2007-08-17'
-date_collected_latest: '2007-08-17'
 date_collected_earliest: '2007-08-17'
 record_type: core
 medium: lake_sediment

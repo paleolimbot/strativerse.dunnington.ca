@@ -1,7 +1,6 @@
 ---
 title: ECO.1
 date: '2001-03-06'
-date_collected_latest: '2001-03-06'
 date_collected_earliest: '2001-03-06'
 record_type: core
 medium: lake_sediment

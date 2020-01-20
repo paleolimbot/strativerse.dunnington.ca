@@ -1,7 +1,6 @@
 ---
 title: Dumme Mosse (replicate)
 date: '2000-12-31'
-date_collected_latest: '2000-12-31'
 date_collected_earliest: '2000-01-01'
 record_type: core
 medium: peat

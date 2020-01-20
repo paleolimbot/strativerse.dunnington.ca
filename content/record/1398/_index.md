@@ -1,7 +1,6 @@
 ---
 title: Clearwater Lake-10m
 date: '1982-06-30'
-date_collected_latest: '1982-06-30'
 date_collected_earliest: '1982-06-01'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: Banb5
 date: '1998-08-31'
-date_collected_latest: '1998-08-31'
 date_collected_earliest: '1998-08-01'
 record_type: core
 medium: lake_sediment

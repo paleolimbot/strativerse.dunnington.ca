@@ -1,7 +1,6 @@
 ---
 title: FL12-1
 date: '2012-05-25'
-date_collected_latest: '2012-05-25'
 date_collected_earliest: '2012-05-25'
 record_type: core
 medium: lake_sediment

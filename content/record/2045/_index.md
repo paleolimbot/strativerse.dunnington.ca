@@ -1,7 +1,6 @@
 ---
 title: Teresa Lake
 date: '2011-08-31'
-date_collected_latest: '2011-08-31'
 date_collected_earliest: '2011-08-01'
 record_type: core
 medium: lake_sediment

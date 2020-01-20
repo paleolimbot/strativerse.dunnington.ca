@@ -1,7 +1,6 @@
 ---
 title: East Richardson Pond
 date: '1978-11-12'
-date_collected_latest: '1978-11-12'
 date_collected_earliest: '1978-11-12'
 record_type: core
 medium: lake_sediment

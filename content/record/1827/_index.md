@@ -1,7 +1,6 @@
 ---
 title: Nylandssjön
 date: '2000-12-31'
-date_collected_latest: '2000-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

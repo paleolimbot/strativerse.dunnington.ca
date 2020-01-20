@@ -1,7 +1,6 @@
 ---
 title: Bermuda (Southern Reef Preserve)
 date: '1983-12-31'
-date_collected_latest: '1983-12-31'
 date_collected_earliest: ''
 record_type: section
 medium: coral

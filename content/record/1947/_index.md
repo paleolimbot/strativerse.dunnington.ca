@@ -1,7 +1,6 @@
 ---
 title: Bysjön
 date: '2002-12-31'
-date_collected_latest: '2002-12-31'
 date_collected_earliest: '2002-01-01'
 record_type: core
 medium: lake_sediment

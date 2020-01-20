@@ -1,7 +1,6 @@
 ---
 title: BRT.B2
 date: '2000-07-25'
-date_collected_latest: '2000-07-25'
 date_collected_earliest: '2000-07-25'
 record_type: core
 medium: lake_sediment

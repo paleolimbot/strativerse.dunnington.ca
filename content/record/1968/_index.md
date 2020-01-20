@@ -1,7 +1,6 @@
 ---
 title: Pendio vello Bog
 date: '1997-12-31'
-date_collected_latest: '1997-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

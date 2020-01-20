@@ -1,7 +1,6 @@
 ---
 title: HRD(3)
 date: '1994-09-19'
-date_collected_latest: '1994-09-19'
 date_collected_earliest: '1994-09-19'
 record_type: core
 medium: lake_sediment

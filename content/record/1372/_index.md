@@ -1,7 +1,6 @@
 ---
 title: Second Pond-Shallow
 date: '1983-12-31'
-date_collected_latest: '1983-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

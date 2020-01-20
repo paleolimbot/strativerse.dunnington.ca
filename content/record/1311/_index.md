@@ -1,7 +1,6 @@
 ---
 title: Crosson Lake-E
 date: '1982-12-31'
-date_collected_latest: '1982-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

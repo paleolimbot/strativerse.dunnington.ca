@@ -1,7 +1,6 @@
 ---
 title: Access Lake
 date: '1978-07-28'
-date_collected_latest: '1978-07-28'
 date_collected_earliest: '1978-07-28'
 record_type: core
 medium: lake_sediment

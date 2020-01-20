@@ -1,7 +1,6 @@
 ---
 title: DCC
 date: '2010-12-31'
-date_collected_latest: '2010-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: peat

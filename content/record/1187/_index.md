@@ -1,7 +1,6 @@
 ---
 title: HAR.3
 date: '1997-07-29'
-date_collected_latest: '1997-07-29'
 date_collected_earliest: '1997-07-29'
 record_type: core
 medium: lake_sediment

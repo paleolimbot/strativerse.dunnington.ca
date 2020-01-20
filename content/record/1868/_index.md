@@ -1,7 +1,6 @@
 ---
 title: C3
 date: '1994-06-30'
-date_collected_latest: '1994-06-30'
 date_collected_earliest: '1994-06-01'
 record_type: core
 medium: lake_sediment

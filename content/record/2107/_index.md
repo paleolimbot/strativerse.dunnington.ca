@@ -1,7 +1,6 @@
 ---
 title: Crooked Lake
 date: '1984-07-31'
-date_collected_latest: '1984-07-31'
 date_collected_earliest: '1984-07-01'
 record_type: core
 medium: lake_sediment

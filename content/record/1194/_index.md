@@ -1,7 +1,6 @@
 ---
 title: BEC.1
 date: '2001-07-17'
-date_collected_latest: '2001-07-17'
 date_collected_earliest: '2001-07-17'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: BH3
 date: '1982-12-31'
-date_collected_latest: '1982-12-31'
 date_collected_earliest: '1982-01-01'
 record_type: core
 medium: peat
@@ -27,6 +26,7 @@ parameters:
 publications:
   - norton_etal97
   - norton_kahl86
+  - norton_kahl91
 geo_error: 0.0
 geometry: ''
 bbox: ~

@@ -1,7 +1,6 @@
 ---
 title: Deep Lake
 date: '1982-12-31'
-date_collected_latest: '1982-12-31'
 date_collected_earliest: '1982-01-01'
 record_type: core
 medium: lake_sediment
@@ -31,6 +30,7 @@ publications:
   - blais95
   - blais_etal95
   - norton_kahl86
+  - norton_kahl91
 geo_error: 0.0
 geometry: ''
 bbox: ~

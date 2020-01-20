@@ -1,7 +1,6 @@
 ---
 title: DEK.B
 date: '1998-04-06'
-date_collected_latest: '1998-04-06'
 date_collected_earliest: '1998-04-06'
 record_type: core
 medium: lake_sediment

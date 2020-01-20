@@ -1,7 +1,6 @@
 ---
 title: Basin B
 date: '2006-09-30'
-date_collected_latest: '2006-09-30'
 date_collected_earliest: '2006-09-01'
 record_type: core
 medium: lake_sediment

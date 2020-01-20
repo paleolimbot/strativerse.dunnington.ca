@@ -1,7 +1,6 @@
 ---
 title: GC-1/GC-2
 date: '2010-09-30'
-date_collected_latest: '2010-09-30'
 date_collected_earliest: '2010-09-01'
 record_type: core
 medium: lake_sediment

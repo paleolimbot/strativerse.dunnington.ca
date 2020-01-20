@@ -1,7 +1,6 @@
 ---
 title: Lake Husted
 date: '1982-07-31'
-date_collected_latest: '1982-07-31'
 date_collected_earliest: '1982-07-01'
 record_type: core
 medium: lake_sediment

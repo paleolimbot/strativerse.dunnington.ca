@@ -1,7 +1,6 @@
 ---
 title: G1
 date: '2009-12-31'
-date_collected_latest: '2009-12-31'
 date_collected_earliest: '2009-01-01'
 record_type: core
 medium: lake_sediment

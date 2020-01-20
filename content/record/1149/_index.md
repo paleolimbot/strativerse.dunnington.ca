@@ -1,7 +1,6 @@
 ---
 title: CHC.4
 date: '1997-08-18'
-date_collected_latest: '1997-08-18'
 date_collected_earliest: '1997-08-18'
 record_type: core
 medium: lake_sediment

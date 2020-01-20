@@ -7,5 +7,5 @@ geo_error: 0.0
 bbox: ~
 longitude: ''
 latitude: ''
-OSM: ''
+external_links: {}
 ---

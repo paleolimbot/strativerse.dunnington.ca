@@ -1,7 +1,6 @@
 ---
 title: CYN
 date: '1998-11-10'
-date_collected_latest: '1998-11-10'
 date_collected_earliest: '1998-11-10'
 record_type: core
 medium: lake_sediment

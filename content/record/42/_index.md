@@ -1,7 +1,6 @@
 ---
 title: Coventry Lake
 date: '2001-12-31'
-date_collected_latest: '2001-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: BBP
 date: '2000-08-29'
-date_collected_latest: '2000-08-29'
 date_collected_earliest: '2000-08-29'
 record_type: core
 medium: lake_sediment

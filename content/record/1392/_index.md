@@ -1,7 +1,6 @@
 ---
 title: Three Mile Lake
 date: '1984-12-31'
-date_collected_latest: '1984-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: NJPAK.4
 date: '1997-09-17'
-date_collected_latest: '1997-09-17'
 date_collected_earliest: '1997-09-17'
 record_type: core
 medium: lake_sediment

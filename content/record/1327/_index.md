@@ -1,7 +1,6 @@
 ---
 title: Jerry Lake-D
 date: '1982-12-31'
-date_collected_latest: '1982-12-31'
 date_collected_earliest: ''
 record_type: core
 medium: lake_sediment
@@ -18,6 +17,7 @@ publications:
   - norton_etal90
   - blais95
   - evans_etal86
+  - norton_kahl91
 geo_error: 0.0
 geometry: ''
 bbox: ~

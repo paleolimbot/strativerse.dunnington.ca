@@ -1,7 +1,6 @@
 ---
 title: Lake Sammamish
 date: '2006-12-31'
-date_collected_latest: '2006-12-31'
 date_collected_earliest: '2006-01-01'
 record_type: core
 medium: lake_sediment

@@ -1,7 +1,6 @@
 ---
 title: LL-3E
 date: '1991-11-26'
-date_collected_latest: '1991-11-26'
 date_collected_earliest: '1991-11-26'
 record_type: core
 medium: lake_sediment

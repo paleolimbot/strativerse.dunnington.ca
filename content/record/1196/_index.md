@@ -1,7 +1,6 @@
 ---
 title: LL.CST.15C(1)
 date: '1994-05-10'
-date_collected_latest: '1994-05-10'
 date_collected_earliest: '1994-05-10'
 record_type: core
 medium: lake_sediment

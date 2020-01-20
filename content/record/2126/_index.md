@@ -1,7 +1,6 @@
 ---
 title: Lisianski Island (Hawaii)
 date: '1979-12-31'
-date_collected_latest: '1979-12-31'
 date_collected_earliest: ''
 record_type: section
 medium: coral
