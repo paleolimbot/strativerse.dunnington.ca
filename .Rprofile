@@ -246,8 +246,7 @@ read_list <- function(fname = clipr::read_clip(), pb = NULL) {
 
 read_df <- function(fname = clipr::read_clip(), pb = NULL) {
   lst <- read_list(fname, pb = pb)
-  
-  list_col_fields <- c("csl", "people", "parameters", "publications", "bbox")
+  list_col_fields <- c("csl", "people", "parameters", "publications", "bbox", "external_links")
   is_list_col <- names(lst) %in% list_col_fields
   lst[is_list_col] <- map(lst[is_list_col], list)
   if (!all(map_int(lst, length) == 1)) {
