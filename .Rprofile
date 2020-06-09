@@ -575,7 +575,7 @@ new_publication <- function(csl, person_index = sv_people()) {
   invisible(new_path)
 }
 
-import_publications <- function(csl_json = rbbt::bbt_bib_zotero("csljson", rbbt::bbt_return)) {
+import_publications <- function(csl_json = rbbt::bbt_bib_selected("csljson", rbbt::bbt_return)) {
   csl <- jsonlite::fromJSON(csl_json, simplifyVector = FALSE)
   
   ids <- map_chr(csl, "id")
