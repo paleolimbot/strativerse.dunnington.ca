@@ -1,4 +1,4 @@
-baseurl = "https://strativerse.org/"
+baseurl = "https://strativerse.dunnington.ca/"
 languageCode = "en-us"
 title = "Strativerse"
 theme = "hugo-lithium"
