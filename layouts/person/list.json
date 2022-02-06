@@ -1,5 +1,6 @@
 {{- $slug := replace (replace .Path "/_index.md" "") "person/" "" }}
 {{- $publications := where (where .Site.Pages "Type" "publication") "Params.people" "intersect" (slice $slug) -}}
+{{- if $publications -}}
 {{- $publication_slugs := partial "fun/publications_slugs" $publications -}}
 {{- $records := where (where .Site.Pages "Type" "record") "Params.publications" "intersect" $publication_slugs -}}
 {{- $index := slice -}}
@@ -14,3 +15,5 @@
   {{- $index = append $index (slice (partial "fun/search_index.json" .)) -}}
 {{- end -}}
 {{- jsonify $index -}}
+{{- else -}}{}
+{{- end -}}
